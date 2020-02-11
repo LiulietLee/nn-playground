@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="nn_playground" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F1J-TV-Jhs" customClass="VisualView" customModule="nn_playground" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="154" width="320" height="320"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="Ddv-d8-GmB"/>
+                                    <constraint firstAttribute="width" secondItem="F1J-TV-Jhs" secondAttribute="height" multiplier="1:1" id="xGB-3o-9gM"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loss:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQh-EB-fga">
+                                <rect key="frame" x="32" y="109" width="256" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Epoch:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E1V-vC-cDI">
+                                <rect key="frame" x="32" y="64" width="256" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dVu-sb-Qxc">
+                                <rect key="frame" x="135.5" y="506" width="49" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="startEvolvingWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A7n-sd-Vn3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="VQh-EB-fga" firstAttribute="top" secondItem="E1V-vC-cDI" secondAttribute="bottom" constant="16" id="0tf-MO-se7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="E1V-vC-cDI" secondAttribute="trailing" constant="32" id="3fC-4b-Dq7"/>
+                            <constraint firstItem="dVu-sb-Qxc" firstAttribute="top" secondItem="F1J-TV-Jhs" secondAttribute="bottom" constant="32" id="L8L-x2-5ks"/>
+                            <constraint firstItem="F1J-TV-Jhs" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Mm0-sI-KNa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VQh-EB-fga" secondAttribute="trailing" constant="32" id="cVd-Rc-6OL"/>
+                            <constraint firstItem="dVu-sb-Qxc" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="jrf-hB-B6B"/>
+                            <constraint firstItem="F1J-TV-Jhs" firstAttribute="top" secondItem="VQh-EB-fga" secondAttribute="bottom" constant="16" id="mpE-0p-UsM"/>
+                            <constraint firstItem="E1V-vC-cDI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="otL-Oh-aTS"/>
+                            <constraint firstItem="E1V-vC-cDI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="uWc-3o-lsd"/>
+                            <constraint firstItem="VQh-EB-fga" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="zIv-xE-12o"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="epochLabel" destination="E1V-vC-cDI" id="8ds-Np-vIK"/>
+                        <outlet property="imageView" destination="F1J-TV-Jhs" id="kGa-Vy-XkP"/>
+                        <outlet property="lossLabel" destination="VQh-EB-fga" id="lNH-zi-gIH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.75" y="109.85915492957747"/>
+        </scene>
+    </scenes>
+</document>
