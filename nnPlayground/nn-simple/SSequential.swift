@@ -10,10 +10,10 @@ import Foundation
 
 public class SSequential {
     
-    var layers = [SDense]()
+    public var layers = [SDense]()
     
-    var score = [[Double]]()
-    var input = [[Double]]()
+    public var score = [[Double]]()
+    public var input = [[Double]]()
     
     public init(_ desc: [Int] = []) {
         if desc.isEmpty { return }

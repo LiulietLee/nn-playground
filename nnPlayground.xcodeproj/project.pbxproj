@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F094DA92402C17400809C46 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F094DA82402C17400809C46 /* TestView.swift */; };
+		4F094DAD2402DA7700809C46 /* ConnectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F094DAC2402DA7700809C46 /* ConnectView.swift */; };
+		4F094DAF2402DA8200809C46 /* VisualView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F094DAE2402DA8200809C46 /* VisualView.swift */; };
 		4F7CEB6524012BFE00DE182A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEB6424012BFE00DE182A /* AppDelegate.swift */; };
 		4F7CEB6724012BFE00DE182A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEB6624012BFE00DE182A /* SceneDelegate.swift */; };
 		4F7CEB6924012BFE00DE182A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEB6824012BFE00DE182A /* ContentView.swift */; };
@@ -21,7 +24,6 @@
 		4F7CEB8524012C7300DE182A /* SDense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEB8224012C7300DE182A /* SDense.swift */; };
 		4F7CEBED24012D1200DE182A /* PlaygroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEBEC24012D1200DE182A /* PlaygroundView.swift */; };
 		4F7CEBF124012D3200DE182A /* PlaygroundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEBF024012D3200DE182A /* PlaygroundViewModel.swift */; };
-		4F7CEBF52401318B00DE182A /* VisualView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEBF42401318B00DE182A /* VisualView.swift */; };
 		4F7CEC362401710700DE182A /* d2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEBFB2401710700DE182A /* d2.swift */; };
 		4F7CEC372401710700DE182A /* svm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEBFC2401710700DE182A /* svm.swift */; };
 		4F7CEC382401710700DE182A /* Loss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEBFD2401710700DE182A /* Loss.swift */; };
@@ -65,6 +67,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F094DA82402C17400809C46 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		4F094DAC2402DA7700809C46 /* ConnectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectView.swift; sourceTree = "<group>"; };
+		4F094DAE2402DA8200809C46 /* VisualView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualView.swift; sourceTree = "<group>"; };
 		4F7CEB6124012BFE00DE182A /* nnPlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nnPlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F7CEB6424012BFE00DE182A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F7CEB6624012BFE00DE182A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,7 +86,6 @@
 		4F7CEB8224012C7300DE182A /* SDense.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDense.swift; sourceTree = "<group>"; };
 		4F7CEBEC24012D1200DE182A /* PlaygroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaygroundView.swift; sourceTree = "<group>"; };
 		4F7CEBF024012D3200DE182A /* PlaygroundViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaygroundViewModel.swift; sourceTree = "<group>"; };
-		4F7CEBF42401318B00DE182A /* VisualView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualView.swift; sourceTree = "<group>"; };
 		4F7CEBFB2401710700DE182A /* d2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = d2.swift; sourceTree = "<group>"; };
 		4F7CEBFC2401710700DE182A /* svm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = svm.swift; sourceTree = "<group>"; };
 		4F7CEBFD2401710700DE182A /* Loss.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loss.swift; sourceTree = "<group>"; };
@@ -165,6 +169,7 @@
 				4F7CEB6A24012C0200DE182A /* Assets.xcassets */,
 				4F7CEB6F24012C0200DE182A /* LaunchScreen.storyboard */,
 				4F7CEB7224012C0200DE182A /* Info.plist */,
+				4F094DA82402C17400809C46 /* TestView.swift */,
 				4F7CEB6C24012C0200DE182A /* Preview Content */,
 			);
 			path = nnPlayground;
@@ -202,7 +207,8 @@
 			isa = PBXGroup;
 			children = (
 				4F7CEBF32401316D00DE182A /* PlaygroundView */,
-				4F7CEBF42401318B00DE182A /* VisualView.swift */,
+				4F094DAC2402DA7700809C46 /* ConnectView.swift */,
+				4F094DAE2402DA8200809C46 /* VisualView.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -529,9 +535,12 @@
 				4F7CEC412401710700DE182A /* ModelStorage.swift in Sources */,
 				4F7CEC392401710700DE182A /* step_m.metal in Sources */,
 				4F7CEB6724012BFE00DE182A /* SceneDelegate.swift in Sources */,
+				4F094DAF2402DA8200809C46 /* VisualView.swift in Sources */,
+				4F094DAD2402DA7700809C46 /* ConnectView.swift in Sources */,
 				4F7CEC592401710700DE182A /* BasePool.swift in Sources */,
 				4F7CEC432401710700DE182A /* ThreadPool.swift in Sources */,
 				4F7CEC472401710700DE182A /* LLVector.swift in Sources */,
+				4F094DA92402C17400809C46 /* TestView.swift in Sources */,
 				4F7CEBED24012D1200DE182A /* PlaygroundView.swift in Sources */,
 				4F7CEB7D24012C6C00DE182A /* Transform.swift in Sources */,
 				4F7CEC532401710700DE182A /* relu_m.metal in Sources */,
@@ -544,7 +553,6 @@
 				4F7CEB7C24012C6C00DE182A /* DataGenerator.swift in Sources */,
 				4F7CEC3E2401710700DE182A /* MNISTReader.swift in Sources */,
 				4F7CEC372401710700DE182A /* svm.swift in Sources */,
-				4F7CEBF52401318B00DE182A /* VisualView.swift in Sources */,
 				4F7CEC462401710700DE182A /* NormalRandom.swift in Sources */,
 				4F7CEC4B2401710700DE182A /* Container.swift in Sources */,
 			);

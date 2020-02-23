@@ -12,12 +12,13 @@ public class SDense {
     var inFeatures = 0
     var outFeatures = 0
     var batchSize = 1
+    var relu = true
     
     public var score = [[Double]]()
     var interScore = [[Double]]()
     
-    var param = [[Double]]()
-    var bias = [Double]()
+    public var param = [[Double]]()
+    public var bias = [Double]()
     
     var vparam = [[[Double]]]()
     var vbias = [[Double]]()
@@ -56,7 +57,11 @@ public class SDense {
             }
             
             for i in 0..<outFeatures {
-                score[batch][i] = max(interScore[batch][i], 0.001 * interScore[batch][i])
+                if relu {
+                    score[batch][i] = max(interScore[batch][i], 0.001 * interScore[batch][i])
+                } else {
+                    score[batch][i] = interScore[batch][i]
+                }
             }
         }
         
@@ -79,18 +84,30 @@ public class SDense {
         
         for batch in 0..<batchSize {
             for i in 0..<outFeatures {
-                dbias[batch][i] += delta[batch][i] * (interScore[batch][i] >= 0.0 ? 1.0 : 0.001)
-            }
-            
-            for i in 0..<outFeatures {
-                for j in 0..<inFeatures {
-                    da[batch][j] += (interScore[batch][i] >= 0.0 ? 1.0 : 0.001) * delta[batch][i] * param[i][j]
+                if relu {
+                    dbias[batch][i] += delta[batch][i] * (interScore[batch][i] >= 0.0 ? 1.0 : 0.001)
+                } else {
+                    dbias[batch][i] += delta[batch][i]
                 }
             }
             
             for i in 0..<outFeatures {
                 for j in 0..<inFeatures {
-                    dparam[batch][i][j] += (interScore[batch][i] >= 0.0 ? 1.0 : 0.001) * delta[batch][i] * input[batch][j]
+                    if relu {
+                        da[batch][j] += delta[batch][i] * param[i][j] * (interScore[batch][i] >= 0.0 ? 1.0 : 0.001)
+                    } else {
+                        da[batch][j] += delta[batch][i] * param[i][j]
+                    }
+                }
+            }
+            
+            for i in 0..<outFeatures {
+                for j in 0..<inFeatures {
+                    if relu {
+                        dparam[batch][i][j] += delta[batch][i] * input[batch][j] * (interScore[batch][i] >= 0.0 ? 1.0 : 0.001)
+                    } else {
+                        dparam[batch][i][j] += delta[batch][i] * input[batch][j]
+                    }
                 }
             }
         }

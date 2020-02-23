@@ -10,7 +10,7 @@ import Foundation
 
 public class Evolv {
     
-    var desc = [2, 4, 2] {
+    var desc = [2, 3, 3] {
         didSet {
             model = SSequential(desc)
         }
@@ -95,9 +95,9 @@ public class Evolv {
                 Transform.transform((self.data[id].position.x, self.data[id].position.y))[0]
             }
             let label = (i * batchSize..<(i + 1) *   batchSize).map { id in
-                self.data[id].label > 0.0 ? [1.0, 0.0] : [0.0, 1.0]
+                self.data[id].label > 0.0 ? [1.0] : [0.0]
             }
-                    
+
             let _ = model.forward(X)
             let loss = model.loss(label)
             runningLoss += loss
