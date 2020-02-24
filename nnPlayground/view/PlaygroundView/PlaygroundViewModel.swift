@@ -37,7 +37,6 @@ public class PlaygroundViewModel: ObservableObject {
     }
     
     func newModelGenerated() {
-        firstEvolv = true
         epochCount = 0
         mainImageIndex = (model.desc.count, 0)
         evolvOnce()

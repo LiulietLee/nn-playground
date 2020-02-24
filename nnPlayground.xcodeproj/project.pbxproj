@@ -692,6 +692,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"nnPlayground/Preview Content\"";
+				DEVELOPMENT_TEAM = 54YMT4F4W9;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = nnPlayground/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -711,6 +712,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"nnPlayground/Preview Content\"";
+				DEVELOPMENT_TEAM = 54YMT4F4W9;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = nnPlayground/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

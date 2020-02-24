@@ -28,14 +28,18 @@ public class Evolv {
     }
 
     public func addLayer() {
-        desc.append(2)
+        if desc.count < 5 {
+            desc.append(2)
+        }
     }
     
     public func dropLayer(_ id: Int = -1) {
-        if id >= 0 {
-            desc.remove(at: id)
-        } else {
-            desc.remove(at: desc.count - id)
+        if desc.count > 1 {
+            if id >= 0 {
+                desc.remove(at: id)
+            } else {
+                desc.remove(at: desc.count + id)
+            }
         }
     }
     
@@ -95,7 +99,7 @@ public class Evolv {
                 Transform.transform((self.data[id].position.x, self.data[id].position.y))[0]
             }
             let label = (i * batchSize..<(i + 1) *   batchSize).map { id in
-                self.data[id].label > 0.0 ? [1.0] : [0.0]
+                [self.data[id].label]
             }
 
             let _ = model.forward(X)
