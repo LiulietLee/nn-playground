@@ -38,7 +38,7 @@ struct ConnectView: View {
         if elem > 0.0 {
             return Color(red: 1.0, green: (1 - elem), blue: (1 - elem))
         } else {
-            return Color(red: (1 + elem), green: 1.0, blue: (1 + elem))
+            return Color(red: (1 + elem), green: (1 + elem), blue: 1.0)
         }
     }
     

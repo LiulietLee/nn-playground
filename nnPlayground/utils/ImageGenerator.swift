@@ -53,7 +53,7 @@ public func makePixelSet(_ array: [[Double]]) -> [[Pixel]] {
             if elem > 0.0 {
                 pixels[i][j] = Pixel(red: 1.0, green: (1 - elem), blue: (1 - elem))
             } else {
-                pixels[i][j] = Pixel(red: (1 + elem), green: 1.0, blue: (1 + elem))
+                pixels[i][j] = Pixel(red: (1 + elem), green: (1 + elem), blue: 1.0)
             }
         }
     }

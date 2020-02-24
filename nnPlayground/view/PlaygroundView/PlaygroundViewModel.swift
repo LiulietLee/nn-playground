@@ -17,7 +17,10 @@ public class PlaygroundViewModel: ObservableObject {
     var mainImage = UIImage()
     var mainImageIndex = (0, 0) {
         didSet {
-            mainImage = visualImages[mainImageIndex.0][mainImageIndex.1]
+            if mainImageIndex.0 < visualImages.count,
+                mainImageIndex.1 < visualImages[mainImageIndex.0].count {
+                mainImage = visualImages[mainImageIndex.0][mainImageIndex.1]
+            }
         }
     }
     var runningLoss = 0.0
@@ -30,12 +33,18 @@ public class PlaygroundViewModel: ObservableObject {
     var firstEvolv = true
     
     public init() {
-        evolvOnce()
-        mainImageIndex = (model.desc.count, 0)
-        mainImage = visualImages[mainImageIndex.0][mainImageIndex.1]
+        newModelGenerated()
     }
     
-    public func evolvOnce(epoch: Int = 1) {
+    func newModelGenerated() {
+        firstEvolv = true
+        epochCount = 0
+        mainImageIndex = (model.desc.count, 0)
+        evolvOnce()
+        objectWillChange.send()
+    }
+    
+    public func evolvOnce() {
         let (array, loss) = model.forwardGroup()
         for (j, layer) in array.enumerated() {
             if visualImages.count <= j {
@@ -53,18 +62,18 @@ public class PlaygroundViewModel: ObservableObject {
         }
         mainImage = visualImages[mainImageIndex.0][mainImageIndex.1]
         runningLoss = loss
-        epochCount = epoch
+        epochCount += 1
+        
+        DispatchQueue.main.async {
+            self.objectWillChange.send()
+        }
     }
     
     public func evolv() {
         DispatchQueue.global().async {
-            for i in 0..<2000 {
+            while true {
                 self.barrier.wait()
-                self.evolvOnce(epoch: i)
-                DispatchQueue.main.async {
-                    self.objectWillChange.send()
-                }
-                
+                self.evolvOnce()
                 self.barrier.signal()
             }
         }
@@ -84,6 +93,18 @@ public class PlaygroundViewModel: ObservableObject {
         barrier.wait()
     }
     
+    public func evolvStop() {
+        if evolving {
+            evolvPause()
+        }
+    }
+    
+    public func evolvRestart() {
+        evolvStop()
+        model.model = SSequential(model.desc)
+        newModelGenerated()
+    }
+    
     public func evolvToggle() {
         if evolving {
             evolvPause()
@@ -91,5 +112,31 @@ public class PlaygroundViewModel: ObservableObject {
             evolvBegin()
         }
         objectWillChange.send()
+    }
+}
+
+extension PlaygroundViewModel {
+    public func addLayer() {
+        evolvStop()
+        model.addLayer()
+        newModelGenerated()
+    }
+    
+    public func dropLayer(_ id: Int = -1) {
+        evolvStop()
+        model.dropLayer(id)
+        newModelGenerated()
+    }
+
+    public func addNeuron(at id: Int) {
+        evolvStop()
+        model.addNeuron(at: id)
+        newModelGenerated()
+    }
+    
+    public func dropNeuron(at id: Int) {
+        evolvStop()
+        model.dropNeuron(at: id)
+        newModelGenerated()
     }
 }
