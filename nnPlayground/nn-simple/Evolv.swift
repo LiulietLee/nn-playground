@@ -21,6 +21,8 @@ public class Evolv {
     var data = [Sample]()
     
     let displayImageSize = 24
+    var learningRate = 0.003
+    var batchSize = 32
     
     public init() {
         model = SSequential(desc)
@@ -49,7 +51,7 @@ public class Evolv {
     }
     
     public func addNeuron(at id: Int) {
-        desc[id] = min(6, desc[id] + 1)
+        desc[id] = min(5, desc[id] + 1)
     }
     
     public func dropNeuron(at id: Int) {
@@ -92,13 +94,12 @@ public class Evolv {
         }
 
         var runningLoss = 0.0
-        let batchSize = data.count / 8
        
         for i in 0..<data.count / batchSize {
             let X = (i * batchSize..<(i + 1) * batchSize).map { id in
                 Transform.transform((self.data[id].position.x, self.data[id].position.y))[0]
             }
-            let label = (i * batchSize..<(i + 1) *   batchSize).map { id in
+            let label = (i * batchSize..<(i + 1) * batchSize).map { id in
                 [self.data[id].label]
             }
 
@@ -106,7 +107,7 @@ public class Evolv {
             let loss = model.loss(label)
             runningLoss += loss
             model.backward(label)
-            model.step(lr: 0.003, momentum: 0.99)
+            model.step(lr: learningRate, momentum: 0.99)
         }
 
         runningLoss /= Double(data.count)

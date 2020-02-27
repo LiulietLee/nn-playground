@@ -24,8 +24,9 @@ public class DataGenerator {
         case center
         case diag
     }
-        
-    public static let dataScale = 1.0
+    
+    public static var noise = 0.0
+    public static let dataScale = 5.0
     
     public static func centeredData() -> [Sample] {
         var data = [Sample]()
@@ -34,9 +35,9 @@ public class DataGenerator {
                 let x = x * dataScale
                 let y = y * dataScale
                 
-                if x * x + y * y < 0.3 * dataScale {
+                if x * x + y * y < 0.3 * dataScale * dataScale {
                     data.append(Sample(position: (x, y), label: 1.0))
-                } else if x * x + y * y > 0.5 * dataScale {
+                } else if x * x + y * y > 0.5 * dataScale * dataScale {
                     data.append(Sample(position: (x, y), label: 0.0))
                 }
             }

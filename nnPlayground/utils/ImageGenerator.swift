@@ -48,7 +48,7 @@ public func makePixelSet(_ array: [[Double]]) -> [[Pixel]] {
         
     for i in 0..<height {
         for j in 0..<width {
-            let elem = atan(array[i][j]) * 2 / .pi
+            let elem = atan(array[array.count - 1 - i][j]) * 2 / .pi
             
             if elem > 0.0 {
                 pixels[i][j] = Pixel(red: 1.0, green: (1 - elem), blue: (1 - elem))

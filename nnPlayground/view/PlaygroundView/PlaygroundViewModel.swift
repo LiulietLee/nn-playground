@@ -32,6 +32,32 @@ public class PlaygroundViewModel: ObservableObject {
 
     var firstEvolv = true
     
+    var learningRateScaler: Double {
+        get { model.learningRate / 0.00001 }
+        set {
+            evolvStop()
+            model.learningRate = newValue * 0.00001
+            newModelGenerated()
+        }
+    }
+    var batchSize: Double {
+        get { Double(model.batchSize) }
+        set {
+            evolvStop()
+            model.batchSize = Int(newValue)
+            newModelGenerated()
+        }
+    }
+    var dataNoise: Double {
+        get { DataGenerator.noise }
+        set {
+            evolvStop()
+            DataGenerator.noise = newValue
+            model.data = DataGenerator.getTrainingData(.center)
+            newModelGenerated()
+        }
+    }
+    
     public init() {
         newModelGenerated()
     }
@@ -136,6 +162,12 @@ extension PlaygroundViewModel {
     public func dropNeuron(at id: Int) {
         evolvStop()
         model.dropNeuron(at: id)
+        newModelGenerated()
+    }
+    
+    public func toggleInput(id: Int) {
+        evolvStop()
+        model.toggleInputLayer(id)
         newModelGenerated()
     }
 }

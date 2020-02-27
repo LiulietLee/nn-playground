@@ -10,6 +10,7 @@
 		4F094DA92402C17400809C46 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F094DA82402C17400809C46 /* TestView.swift */; };
 		4F094DAD2402DA7700809C46 /* ConnectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F094DAC2402DA7700809C46 /* ConnectView.swift */; };
 		4F094DAF2402DA8200809C46 /* VisualView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F094DAE2402DA8200809C46 /* VisualView.swift */; };
+		4F66B78A24059D5900A679E2 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F66B78924059D5900A679E2 /* SettingView.swift */; };
 		4F7CEB6524012BFE00DE182A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEB6424012BFE00DE182A /* AppDelegate.swift */; };
 		4F7CEB6724012BFE00DE182A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEB6624012BFE00DE182A /* SceneDelegate.swift */; };
 		4F7CEB6924012BFE00DE182A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEB6824012BFE00DE182A /* ContentView.swift */; };
@@ -70,6 +71,7 @@
 		4F094DA82402C17400809C46 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		4F094DAC2402DA7700809C46 /* ConnectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectView.swift; sourceTree = "<group>"; };
 		4F094DAE2402DA8200809C46 /* VisualView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualView.swift; sourceTree = "<group>"; };
+		4F66B78924059D5900A679E2 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		4F7CEB6124012BFE00DE182A /* nnPlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nnPlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F7CEB6424012BFE00DE182A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F7CEB6624012BFE00DE182A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -207,8 +209,6 @@
 			isa = PBXGroup;
 			children = (
 				4F7CEBF32401316D00DE182A /* PlaygroundView */,
-				4F094DAC2402DA7700809C46 /* ConnectView.swift */,
-				4F094DAE2402DA8200809C46 /* VisualView.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -216,6 +216,9 @@
 		4F7CEBF32401316D00DE182A /* PlaygroundView */ = {
 			isa = PBXGroup;
 			children = (
+				4F66B78924059D5900A679E2 /* SettingView.swift */,
+				4F094DAE2402DA8200809C46 /* VisualView.swift */,
+				4F094DAC2402DA7700809C46 /* ConnectView.swift */,
 				4F7CEBEC24012D1200DE182A /* PlaygroundView.swift */,
 				4F7CEBF024012D3200DE182A /* PlaygroundViewModel.swift */,
 			);
@@ -522,6 +525,7 @@
 				4F7CEC4F2401710700DE182A /* BaseLayer.swift in Sources */,
 				4F7CEC442401710700DE182A /* AutoRunner.swift in Sources */,
 				4F7CEC5B2401710700DE182A /* AveragePool+Metal.swift in Sources */,
+				4F66B78A24059D5900A679E2 /* SettingView.swift in Sources */,
 				4F7CEC422401710700DE182A /* Storagable.swift in Sources */,
 				4F7CEB7E24012C6C00DE182A /* ImageGenerator.swift in Sources */,
 				4F7CEC5D2401710700DE182A /* Layer.swift in Sources */,

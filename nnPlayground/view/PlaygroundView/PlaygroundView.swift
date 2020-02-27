@@ -11,36 +11,84 @@ import SwiftUI
 struct PlaygroundView: View {
     
     @ObservedObject var vm = PlaygroundViewModel()
+    @State var showSetting = false
     
     var body: some View {
-        VStack {
-            InfoHeader
-                .padding([.leading, .trailing], 128)
-                .padding(.bottom, 32)
-            HStack {
-                LayerCountControl
-                    .frame(
-                        width: 100,
-                        height: CGFloat(vm.model.desc.count * 120 + 180)
-                )
-                ControlPanel
+        GeometryReader { proxy in
+            ZStack {
+                HStack {
+                    HStack {
+                        self.LayerCountControl
+                            .frame(
+                                width: 100,
+                                height: CGFloat(self.vm.model.desc.count * 100 + 170)
+                        )
+                        self.ControlPanel
+                    }
+                    .padding(.horizontal, 72)
+                    .frame(width: proxy.size.width * 0.8)
+
+                    VStack(alignment: .center) {
+                        Image(systemName: "slider.horizontal.3")
+                            .scaleEffect(2)
+                            .foregroundColor(.blue)
+                            .padding(.bottom, 64)
+                            .padding(.trailing, 36)
+                            .onTapGesture {
+                                self.showSetting.toggle()
+                        }
+                        
+                        self.InfoHeader
+                            .padding(.trailing, 32)
+                            .padding(.vertical, 16)
+
+                        self.ProgressControl
+                            .padding(.trailing, 32)
+                            .padding(.top, 32)
+                    }
+                    .frame(width: proxy.size.width * 0.2)
+                }
+            
+                if self.showSetting {
+                    VStack {
+                        SettingView(
+                            learningRate: .init(
+                                get: { self.vm.learningRateScaler },
+                                set: { self.vm.learningRateScaler = $0 }
+                            ),
+                            batchSize: .init(
+                                get: { self.vm.batchSize },
+                                set: { self.vm.batchSize = $0 }
+                            ),
+                            noise: .init(
+                                get: { self.vm.dataNoise },
+                                set: { self.vm.dataNoise = $0 }
+                            ),
+                            disappear: {
+                                self.showSetting.toggle()
+                            },
+                            inputToggled: { i in
+                                self.vm.toggleInput(id: i)
+                            }
+                        ).animation(.default)
+                        
+                        Spacer()
+                    }
+                }
             }
-            .padding([.leading, .trailing], 72)
-            ProgressControl
-                .padding(.top, 32)
         }
     }
     
     var InfoHeader: some View {
-        HStack {
-            HStack {
+        VStack(alignment: .trailing) {
+            VStack(alignment: .trailing) {
                 Text("Epoch: ")
                     .font(.title)
                 Text("\(vm.epochCount)")
                     .font(.title)
-                    .fontWeight(.light)
+                    .fontWeight(.bold)
             }
-            Spacer()
+            .padding(.bottom, 8)
             VStack(alignment: .trailing) {
                 Text("Loss: ")
                     .font(.title)
@@ -67,7 +115,7 @@ struct PlaygroundView: View {
                         ForEach(0..<self.vm.model.desc[layerID], id: \.self) { neuID in
                             Image(uiImage: self.vm.visualImages[layerID][neuID])
                                 .resizable()
-                                .frame(width: 60, height: 60)
+                                .frame(width: 50, height: 50)
                                 .cornerRadius(8)
                                 .shadow(radius: 2)
                         }
@@ -85,7 +133,7 @@ struct PlaygroundView: View {
                             inputNeu: self.vm.model.desc[layerID],
                             outputNeu: self.vm.model.desc[layerID + 1],
                             param: self.vm.model.model.layers[layerID].param)
-                            .frame(height: 60)
+                            .frame(height: 50)
                     }
                 }
             }
@@ -93,21 +141,21 @@ struct PlaygroundView: View {
                 inputNeu: vm.model.desc.last!,
                 outputNeu: 1,
                 param: vm.model.model.layers.last!.param)
-                .frame(height: 80)
+                .frame(height: 50)
             VisualView(
                 data: vm.model.data.enumerated().map { (index, elem) in
                     IdentifiableSample(id: index, content: elem)
                 },
                 scale: DataGenerator.dataScale,
                 image: $vm.mainImage)
-                .frame(width: 200, height: 200)
+                .frame(width: 180, height: 180)
                 .cornerRadius(12)
                 .shadow(radius: 2)
         }
     }
     
     var ProgressControl: some View {
-        HStack(alignment: .center, spacing: 48) {
+        VStack(alignment: .center, spacing: 48) {
             Image(systemName: "gobackward")
                 .foregroundColor(.blue)
                 .scaleEffect(1.8)
@@ -197,6 +245,6 @@ struct PlaygroundView: View {
 struct PlaygroundView_Previews: PreviewProvider {
     static var previews: some View {
         PlaygroundView()
-            .previewLayout(.fixed(width: 900, height: 1280))
+            .previewLayout(.fixed(width: 800, height: 900))
     }
 }

@@ -43,7 +43,7 @@ struct ConnectView: View {
     }
     
     func getMidOf(kth k: Int, total: Int) -> CGFloat {
-        let interval = 60 + 20
+        let interval = 50 + 20
         if total % 2 == 0 {
             let left = (total / 2 - 1) * interval + interval / 2
             return CGFloat(left - interval * k)
