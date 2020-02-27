@@ -20,73 +20,75 @@ struct SettingView: View {
     var inputToggled: (Int) -> Void
     
     var body: some View {
-        HStack {
+        VStack {
+            HStack {
+                VStack(alignment: .trailing) {
+                    ForEach(0..<7, id: \.self) { i in
+                        HStack {
+                            Text(self.imageDisplayName[i])
+                                .font(.subheadline)
+                            Image(self.imageSystemName[i])
+                                .resizable()
+                                .frame(width: 40, height: 40)
+                                .cornerRadius(8)
+                                .shadow(radius: 2)
+                                .opacity(Transform.transform[i].isEnable ? 1.0 : 0.2)
+                                .onTapGesture {
+                                    self.inputToggled(i)
+                            }
+                        }
+                    }
+                }
+                .padding(.trailing, 16)
+                
+                VStack(spacing: 36) {
+                    VStack(spacing: 16) {
+                        HStack {
+                            Text("Learning Rate: ")
+                                .font(.headline)
+                            Text("\(learningRate * 0.00001)")
+                        }
+                        Slider(
+                            value: $learningRate,
+                            in: 1...1999.0,
+                            step: 1
+                        )
+                    }
+                    
+                    VStack(spacing: 16) {
+                        HStack {
+                            Text("Batch Size: ")
+                                .font(.headline)
+                            Text("\(Int(batchSize))")
+                        }
+                        Slider(
+                            value: $batchSize,
+                            in: 1...50.0,
+                            step: 1
+                        )
+                    }
+                    
+                    VStack(spacing: 16) {
+                        HStack {
+                            Text("Noise: ")
+                                .font(.headline)
+                            Text("\(Int(noise * 100))%")
+                        }
+                        Slider(
+                            value: $noise,
+                            in: 0.0...1.0,
+                            step: 0.01
+                        )
+                    }
+                }
+            }
+            
             Image(systemName: "chevron.up")
                 .scaleEffect(1.5)
                 .padding(8)
                 .foregroundColor(.blue)
                 .onTapGesture {
                     self.disappear()
-            }
-            
-            VStack(alignment: .trailing) {
-                ForEach(0..<7, id: \.self) { i in
-                    HStack {
-                        Text(self.imageDisplayName[i])
-                            .font(.subheadline)
-                        Image(self.imageSystemName[i])
-                            .resizable()
-                            .frame(width: 40, height: 40)
-                            .cornerRadius(8)
-                            .shadow(radius: 2)
-                            .opacity(Transform.transform[i].isEnable ? 1.0 : 0.2)
-                            .onTapGesture {
-                                self.inputToggled(i)
-                        }
-                    }
-                }
-            }
-            .padding(.trailing, 16)
-            
-            VStack(spacing: 36) {
-                VStack(spacing: 16) {
-                    HStack {
-                        Text("Learning Rate: ")
-                            .font(.headline)
-                        Text("\(learningRate * 0.00001)")
-                    }
-                    Slider(
-                        value: $learningRate,
-                        in: 1...1999.0,
-                        step: 1
-                    )
-                }
-                
-                VStack(spacing: 16) {
-                    HStack {
-                        Text("Batch Size: ")
-                            .font(.headline)
-                        Text("\(Int(batchSize))")
-                    }
-                    Slider(
-                        value: $batchSize,
-                        in: 1...50.0,
-                        step: 1
-                    )
-                }
-                
-                VStack(spacing: 16) {
-                    HStack {
-                        Text("Noise: ")
-                            .font(.headline)
-                        Text("\(Int(noise * 100))%")
-                    }
-                    Slider(
-                        value: $noise,
-                        in: 0.0...1.0,
-                        step: 0.01
-                    )
-                }
             }
         }
         .padding(32)

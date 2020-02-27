@@ -12,20 +12,20 @@ public class Evolv {
     
     var desc = [2, 3, 3] {
         didSet {
-            model = SSequential(desc)
+            model = SequentialModel(desc)
         }
     }
     
-    var model = SSequential()
+    var model = SequentialModel()
 
     var data = [Sample]()
     
     let displayImageSize = 24
     var learningRate = 0.003
-    var batchSize = 32
+    var batchSize = 8
     
     public init() {
-        model = SSequential(desc)
+        model = SequentialModel(desc)
         data = DataGenerator.getTrainingData(.center)
     }
 

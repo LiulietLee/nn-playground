@@ -20,9 +20,9 @@
 		4F7CEB7C24012C6C00DE182A /* DataGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEB7924012C6C00DE182A /* DataGenerator.swift */; };
 		4F7CEB7D24012C6C00DE182A /* Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEB7A24012C6C00DE182A /* Transform.swift */; };
 		4F7CEB7E24012C6C00DE182A /* ImageGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEB7B24012C6C00DE182A /* ImageGenerator.swift */; };
-		4F7CEB8324012C7300DE182A /* SSequential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEB8024012C7300DE182A /* SSequential.swift */; };
+		4F7CEB8324012C7300DE182A /* SequentialModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEB8024012C7300DE182A /* SequentialModel.swift */; };
 		4F7CEB8424012C7300DE182A /* Evolv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEB8124012C7300DE182A /* Evolv.swift */; };
-		4F7CEB8524012C7300DE182A /* SDense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEB8224012C7300DE182A /* SDense.swift */; };
+		4F7CEB8524012C7300DE182A /* FCLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEB8224012C7300DE182A /* FCLayer.swift */; };
 		4F7CEBED24012D1200DE182A /* PlaygroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEBEC24012D1200DE182A /* PlaygroundView.swift */; };
 		4F7CEBF124012D3200DE182A /* PlaygroundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEBF024012D3200DE182A /* PlaygroundViewModel.swift */; };
 		4F7CEC362401710700DE182A /* d2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEBFB2401710700DE182A /* d2.swift */; };
@@ -83,9 +83,9 @@
 		4F7CEB7924012C6C00DE182A /* DataGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataGenerator.swift; sourceTree = "<group>"; };
 		4F7CEB7A24012C6C00DE182A /* Transform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transform.swift; sourceTree = "<group>"; };
 		4F7CEB7B24012C6C00DE182A /* ImageGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageGenerator.swift; sourceTree = "<group>"; };
-		4F7CEB8024012C7300DE182A /* SSequential.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSequential.swift; sourceTree = "<group>"; };
+		4F7CEB8024012C7300DE182A /* SequentialModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequentialModel.swift; sourceTree = "<group>"; };
 		4F7CEB8124012C7300DE182A /* Evolv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Evolv.swift; sourceTree = "<group>"; };
-		4F7CEB8224012C7300DE182A /* SDense.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDense.swift; sourceTree = "<group>"; };
+		4F7CEB8224012C7300DE182A /* FCLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FCLayer.swift; sourceTree = "<group>"; };
 		4F7CEBEC24012D1200DE182A /* PlaygroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaygroundView.swift; sourceTree = "<group>"; };
 		4F7CEBF024012D3200DE182A /* PlaygroundViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaygroundViewModel.swift; sourceTree = "<group>"; };
 		4F7CEBFB2401710700DE182A /* d2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = d2.swift; sourceTree = "<group>"; };
@@ -198,9 +198,9 @@
 		4F7CEB7F24012C7300DE182A /* nn-simple */ = {
 			isa = PBXGroup;
 			children = (
-				4F7CEB8024012C7300DE182A /* SSequential.swift */,
+				4F7CEB8024012C7300DE182A /* SequentialModel.swift */,
 				4F7CEB8124012C7300DE182A /* Evolv.swift */,
-				4F7CEB8224012C7300DE182A /* SDense.swift */,
+				4F7CEB8224012C7300DE182A /* FCLayer.swift */,
 			);
 			path = "nn-simple";
 			sourceTree = "<group>";
@@ -550,9 +550,9 @@
 				4F7CEC532401710700DE182A /* relu_m.metal in Sources */,
 				4F7CEBF124012D3200DE182A /* PlaygroundViewModel.swift in Sources */,
 				4F7CEB6924012BFE00DE182A /* ContentView.swift in Sources */,
-				4F7CEB8524012C7300DE182A /* SDense.swift in Sources */,
+				4F7CEB8524012C7300DE182A /* FCLayer.swift in Sources */,
 				4F7CEC512401710700DE182A /* Conv+Metal.swift in Sources */,
-				4F7CEB8324012C7300DE182A /* SSequential.swift in Sources */,
+				4F7CEB8324012C7300DE182A /* SequentialModel.swift in Sources */,
 				4F7CEC4D2401710700DE182A /* Dense.swift in Sources */,
 				4F7CEB7C24012C6C00DE182A /* DataGenerator.swift in Sources */,
 				4F7CEC3E2401710700DE182A /* MNISTReader.swift in Sources */,

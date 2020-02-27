@@ -37,7 +37,7 @@ public class PlaygroundViewModel: ObservableObject {
         set {
             evolvStop()
             model.learningRate = newValue * 0.00001
-            newModelGenerated()
+            objectWillChange.send()
         }
     }
     var batchSize: Double {
@@ -45,6 +45,7 @@ public class PlaygroundViewModel: ObservableObject {
         set {
             evolvStop()
             model.batchSize = Int(newValue)
+            model.model = SequentialModel(model.desc)
             newModelGenerated()
         }
     }
@@ -54,6 +55,7 @@ public class PlaygroundViewModel: ObservableObject {
             evolvStop()
             DataGenerator.noise = newValue
             model.data = DataGenerator.getTrainingData(.center)
+            model.model = SequentialModel(model.desc)
             newModelGenerated()
         }
     }
@@ -126,7 +128,7 @@ public class PlaygroundViewModel: ObservableObject {
     
     public func evolvRestart() {
         evolvStop()
-        model.model = SSequential(model.desc)
+        model.model = SequentialModel(model.desc)
         newModelGenerated()
     }
     

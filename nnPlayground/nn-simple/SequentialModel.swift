@@ -8,9 +8,9 @@
 
 import Foundation
 
-public class SSequential {
+public class SequentialModel {
     
-    public var layers = [SDense]()
+    public var layers = [FCLayer]()
     
     public var score = [[Double]]()
     public var input = [[Double]]()
@@ -18,12 +18,12 @@ public class SSequential {
     public init(_ desc: [Int] = []) {
         if desc.isEmpty { return }
         for i in 0..<desc.count - 1 {
-            layers.append(SDense(inFeatures: desc[i], outFeatures: desc[i + 1]))
+            layers.append(FCLayer(inFeatures: desc[i], outFeatures: desc[i + 1]))
         }
-        layers.append(SDense(inFeatures: desc.last!, outFeatures: 1))
+        layers.append(FCLayer(inFeatures: desc.last!, outFeatures: 1))
     }
     
-    public init(_ layers: [SDense]) {
+    public init(_ layers: [FCLayer]) {
         self.layers = layers
     }
     
@@ -60,7 +60,7 @@ public class SSequential {
     }
 }
 
-extension SSequential {
+extension SequentialModel {
     
     public class svm {
         public static var d = 1 - 0.618
@@ -118,7 +118,7 @@ extension SSequential {
     }
 }
 
-extension SSequential {
+extension SequentialModel {
     public class d2 {
         public static func loss(score: [[Double]], label: [[Double]]) -> Double {
             var loss = 0.0

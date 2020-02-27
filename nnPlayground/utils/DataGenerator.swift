@@ -25,15 +25,15 @@ public class DataGenerator {
         case diag
     }
     
-    public static var noise = 0.0
+    public static var noise = 0.3
     public static let dataScale = 5.0
     
     public static func centeredData() -> [Sample] {
         var data = [Sample]()
         for x in stride(from: -0.8, through: 0.8, by: 0.16) {
             for y in stride(from: -0.8, through: 0.8, by: 0.16) {
-                let x = x * dataScale
-                let y = y * dataScale
+                let x = x * dataScale + Double.random(in: -1.0...1.0) * dataScale * noise * 0.1
+                let y = y * dataScale + Double.random(in: -1.0...1.0) * dataScale * noise * 0.1
                 
                 if x * x + y * y < 0.3 * dataScale * dataScale {
                     data.append(Sample(position: (x, y), label: 1.0))
@@ -49,8 +49,8 @@ public class DataGenerator {
         var data = [Sample]()
         for x in stride(from: -0.8, through: 0.8, by: 0.2) {
             for y in stride(from: -0.8, through: 0.8, by: 0.2) {
-                let x = x * dataScale
-                let y = y * dataScale
+                let x = x * dataScale + Double.random(in: -1.0...1.0) * dataScale * noise * 0.1
+                let y = y * dataScale + Double.random(in: -1.0...1.0) * dataScale * noise * 0.1
 
                 if x == 0 || y == 0 { continue }
                 data.append(Sample(position: (x, y), label: y * x < 0 ? 1.0 : 0.0))

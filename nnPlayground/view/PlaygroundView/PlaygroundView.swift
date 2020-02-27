@@ -70,7 +70,7 @@ struct PlaygroundView: View {
                             inputToggled: { i in
                                 self.vm.toggleInput(id: i)
                             }
-                        ).animation(.default)
+                        )
                         
                         Spacer()
                     }
@@ -80,8 +80,8 @@ struct PlaygroundView: View {
     }
     
     var InfoHeader: some View {
-        VStack(alignment: .trailing) {
-            VStack(alignment: .trailing) {
+        VStack {
+            VStack {
                 Text("Epoch: ")
                     .font(.title)
                 Text("\(vm.epochCount)")
@@ -89,7 +89,7 @@ struct PlaygroundView: View {
                     .fontWeight(.bold)
             }
             .padding(.bottom, 8)
-            VStack(alignment: .trailing) {
+            VStack {
                 Text("Loss: ")
                     .font(.title)
                 Text("\(vm.runningLoss)")

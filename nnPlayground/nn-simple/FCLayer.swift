@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class SDense {
+public class FCLayer {
     var inFeatures = 0
     var outFeatures = 0
     var batchSize = 1
