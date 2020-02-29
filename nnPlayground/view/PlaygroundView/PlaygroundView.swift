@@ -33,30 +33,7 @@ public struct PlaygroundView: View {
                 }
             
                 if self.showSetting {
-                    VStack {
-                        SettingView(
-                            learningRate: .init(
-                                get: { self.vm.learningRateScaler },
-                                set: { self.vm.learningRateScaler = $0 }
-                            ),
-                            batchSize: .init(
-                                get: { self.vm.batchSize },
-                                set: { self.vm.batchSize = $0 }
-                            ),
-                            noise: .init(
-                                get: { self.vm.dataNoise },
-                                set: { self.vm.dataNoise = $0 }
-                            ),
-                            disappear: {
-                                self.showSetting.toggle()
-                            },
-                            inputToggled: { i in
-                                self.vm.toggleInput(id: i)
-                            }
-                        )
-                        
-                        Spacer()
-                    }
+                    self.SettingCover
                 }
             }
         }
@@ -185,6 +162,33 @@ public struct PlaygroundView: View {
             self.ProgressControl
                 .padding(.trailing, 32)
                 .padding(.top, 32)
+        }
+    }
+    
+    var SettingCover: some View {
+        VStack {
+            SettingView(
+                learningRate: .init(
+                    get: { self.vm.learningRateScaler },
+                    set: { self.vm.learningRateScaler = $0 }
+                ),
+                batchSize: .init(
+                    get: { self.vm.batchSize },
+                    set: { self.vm.batchSize = $0 }
+                ),
+                noise: .init(
+                    get: { self.vm.dataNoise },
+                    set: { self.vm.dataNoise = $0 }
+                ),
+                disappear: {
+                    self.showSetting.toggle()
+                },
+                inputToggled: { i in
+                    self.vm.toggleInput(id: i)
+                }
+            )
+            
+            Spacer()
         }
     }
 }
