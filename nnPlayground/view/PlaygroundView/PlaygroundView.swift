@@ -8,12 +8,12 @@
 
 import SwiftUI
 
-struct PlaygroundView: View {
+public struct PlaygroundView: View {
     
     @ObservedObject var vm = PlaygroundViewModel()
     @State var showSetting = false
     
-    var body: some View {
+    public var body: some View {
         GeometryReader { proxy in
             ZStack {
                 HStack {
@@ -23,30 +23,13 @@ struct PlaygroundView: View {
                                 width: 100,
                                 height: CGFloat(self.vm.model.desc.count * 100 + 170)
                         )
-                        self.ControlPanel
+                        self.VisualizationPanel
                     }
                     .padding(.horizontal, 72)
                     .frame(width: proxy.size.width * 0.8)
 
-                    VStack(alignment: .center) {
-                        Image(systemName: "slider.horizontal.3")
-                            .scaleEffect(2)
-                            .foregroundColor(.blue)
-                            .padding(.bottom, 64)
-                            .padding(.trailing, 36)
-                            .onTapGesture {
-                                self.showSetting.toggle()
-                        }
-                        
-                        self.InfoHeader
-                            .padding(.trailing, 32)
-                            .padding(.vertical, 16)
-
-                        self.ProgressControl
-                            .padding(.trailing, 32)
-                            .padding(.top, 32)
-                    }
-                    .frame(width: proxy.size.width * 0.2)
+                    self.ControlPanel
+                        .frame(width: proxy.size.width * 0.2)
                 }
             
                 if self.showSetting {
@@ -99,61 +82,6 @@ struct PlaygroundView: View {
         }
     }
     
-    var ControlPanel: some View {
-        VStack(spacing: 0) {
-            ForEach(0..<vm.model.desc.count, id: \.self) { layerID in
-                VStack(spacing: 0) {
-                    HStack(spacing: 20) {
-                        if layerID > 0 {
-                            Image(systemName: "minus.circle")
-                                .foregroundColor(.blue)
-                                .scaleEffect(1.4)
-                                .onTapGesture {
-                                self.vm.dropNeuron(at: layerID)
-                            }
-                        }
-                        ForEach(0..<self.vm.model.desc[layerID], id: \.self) { neuID in
-                            Image(uiImage: self.vm.visualImages[layerID][neuID])
-                                .resizable()
-                                .frame(width: 50, height: 50)
-                                .cornerRadius(8)
-                                .shadow(radius: 2)
-                        }
-                        if layerID > 0 {
-                            Image(systemName: "plus.circle")
-                                .foregroundColor(.red)
-                                .scaleEffect(1.4)
-                                .onTapGesture {
-                                self.vm.addNeuron(at: layerID)
-                            }
-                        }
-                    }
-                    if layerID < self.vm.model.desc.count - 1 {
-                        ConnectView(
-                            inputNeu: self.vm.model.desc[layerID],
-                            outputNeu: self.vm.model.desc[layerID + 1],
-                            param: self.vm.model.model.layers[layerID].param)
-                            .frame(height: 50)
-                    }
-                }
-            }
-            ConnectView(
-                inputNeu: vm.model.desc.last!,
-                outputNeu: 1,
-                param: vm.model.model.layers.last!.param)
-                .frame(height: 50)
-            VisualView(
-                data: vm.model.data.enumerated().map { (index, elem) in
-                    IdentifiableSample(id: index, content: elem)
-                },
-                scale: DataGenerator.dataScale,
-                image: $vm.mainImage)
-                .frame(width: 180, height: 180)
-                .cornerRadius(12)
-                .shadow(radius: 2)
-        }
-    }
-    
     var ProgressControl: some View {
         VStack(alignment: .center, spacing: 48) {
             Image(systemName: "gobackward")
@@ -173,9 +101,7 @@ struct PlaygroundView: View {
                 .foregroundColor(.blue)
                 .scaleEffect(2)
                 .onTapGesture {
-                    if self.vm.evolving {
-                        self.vm.evolvPause()
-                    }
+                    self.vm.evolvStop()
                     self.vm.evolvOnce()
             }
         }
@@ -238,6 +164,27 @@ struct PlaygroundView: View {
             )
             
             return path
+        }
+    }
+    
+    var ControlPanel: some View {
+        VStack(alignment: .center) {
+            Image(systemName: "slider.horizontal.3")
+                .scaleEffect(2)
+                .foregroundColor(.blue)
+                .padding(.bottom, 64)
+                .padding(.trailing, 36)
+                .onTapGesture {
+                    self.showSetting.toggle()
+            }
+            
+            self.InfoHeader
+                .padding(.trailing, 32)
+                .padding(.vertical, 16)
+
+            self.ProgressControl
+                .padding(.trailing, 32)
+                .padding(.top, 32)
         }
     }
 }

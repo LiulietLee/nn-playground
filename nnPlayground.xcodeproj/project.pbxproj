@@ -65,6 +65,7 @@
 		4F7CEC5B2401710700DE182A /* AveragePool+Metal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEC332401710700DE182A /* AveragePool+Metal.swift */; };
 		4F7CEC5C2401710700DE182A /* averagepool_m.metal in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEC342401710700DE182A /* averagepool_m.metal */; };
 		4F7CEC5D2401710700DE182A /* Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEC352401710700DE182A /* Layer.swift */; };
+		4FA51CD6240A61D9002DC02C /* VisualizationPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA51CD5240A61D9002DC02C /* VisualizationPanel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -129,6 +130,7 @@
 		4F7CEC332401710700DE182A /* AveragePool+Metal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AveragePool+Metal.swift"; sourceTree = "<group>"; };
 		4F7CEC342401710700DE182A /* averagepool_m.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = averagepool_m.metal; sourceTree = "<group>"; };
 		4F7CEC352401710700DE182A /* Layer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layer.swift; sourceTree = "<group>"; };
+		4FA51CD5240A61D9002DC02C /* VisualizationPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualizationPanel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +221,7 @@
 				4F66B78924059D5900A679E2 /* SettingView.swift */,
 				4F094DAE2402DA8200809C46 /* VisualView.swift */,
 				4F094DAC2402DA7700809C46 /* ConnectView.swift */,
+				4FA51CD5240A61D9002DC02C /* VisualizationPanel.swift */,
 				4F7CEBEC24012D1200DE182A /* PlaygroundView.swift */,
 				4F7CEBF024012D3200DE182A /* PlaygroundViewModel.swift */,
 			);
@@ -509,6 +512,7 @@
 				4F7CEC522401710700DE182A /* conv_m.metal in Sources */,
 				4F7CEC382401710700DE182A /* Loss.swift in Sources */,
 				4F7CEC3F2401710700DE182A /* Cifar10Reader.swift in Sources */,
+				4FA51CD6240A61D9002DC02C /* VisualizationPanel.swift in Sources */,
 				4F7CEC572401710700DE182A /* MaxPool.swift in Sources */,
 				4F7CEB6524012BFE00DE182A /* AppDelegate.swift in Sources */,
 				4F7CEC362401710700DE182A /* d2.swift in Sources */,

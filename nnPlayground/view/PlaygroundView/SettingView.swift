@@ -42,44 +42,9 @@ struct SettingView: View {
                 .padding(.trailing, 16)
                 
                 VStack(spacing: 36) {
-                    VStack(spacing: 16) {
-                        HStack {
-                            Text("Learning Rate: ")
-                                .font(.headline)
-                            Text("\(learningRate * 0.00001)")
-                        }
-                        Slider(
-                            value: $learningRate,
-                            in: 1...1999.0,
-                            step: 1
-                        )
-                    }
-                    
-                    VStack(spacing: 16) {
-                        HStack {
-                            Text("Batch Size: ")
-                                .font(.headline)
-                            Text("\(Int(batchSize))")
-                        }
-                        Slider(
-                            value: $batchSize,
-                            in: 1...50.0,
-                            step: 1
-                        )
-                    }
-                    
-                    VStack(spacing: 16) {
-                        HStack {
-                            Text("Noise: ")
-                                .font(.headline)
-                            Text("\(Int(noise * 100))%")
-                        }
-                        Slider(
-                            value: $noise,
-                            in: 0.0...1.0,
-                            step: 0.01
-                        )
-                    }
+                    LearningRateSlider
+                    BatchSizeRateSlider
+                    NoiseSlider
                 }
             }
             
@@ -93,6 +58,51 @@ struct SettingView: View {
         }
         .padding(32)
         .background(Color.white)
+    }
+    
+    var LearningRateSlider: some View {
+        VStack(spacing: 16) {
+            HStack {
+                Text("Learning Rate: ")
+                    .font(.headline)
+                Text("\(learningRate * 0.00001)")
+            }
+            Slider(
+                value: $learningRate,
+                in: 1...1999.0,
+                step: 1
+            )
+        }
+    }
+    
+    var BatchSizeRateSlider: some View {
+        VStack(spacing: 16) {
+            HStack {
+                Text("Batch Size: ")
+                    .font(.headline)
+                Text("\(Int(batchSize))")
+            }
+            Slider(
+                value: $batchSize,
+                in: 1...50.0,
+                step: 1
+            )
+        }
+    }
+    
+    var NoiseSlider: some View {
+        VStack(spacing: 16) {
+            HStack {
+                Text("Noise: ")
+                    .font(.headline)
+                Text("\(Int(noise * 100))%")
+            }
+            Slider(
+                value: $noise,
+                in: 0.0...1.0,
+                step: 0.01
+            )
+        }
     }
 }
 

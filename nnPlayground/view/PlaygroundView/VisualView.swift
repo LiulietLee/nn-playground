@@ -19,27 +19,36 @@ struct VisualView: View {
             Image(uiImage: image)
                 .resizable()
                 .scaledToFill()
-            GeometryReader { proxy in
-                ForEach (self.data) { sample in
-                    Circle()
-                        .fill(sample.content.label > 0 ? Color.red : Color.white)
-                        .frame(width: 4, height: 4)
-                        .position(
-                            x: proxy.size.width * (CGFloat(sample.content.position.x / self.scale) + 1.0) / 2,
-                            y: proxy.size.height * (CGFloat(sample.content.position.y / self.scale) + 1.0) / 2
-                    )
-                }
+
+            FilledSampleView
+            StrokedSampleView
+        }
+    }
+    
+    var FilledSampleView: some View {
+        GeometryReader { proxy in
+            ForEach (self.data) { sample in
+                Circle()
+                    .fill(sample.content.label > 0 ? Color.red : Color.white)
+                    .frame(width: 4, height: 4)
+                    .position(
+                        x: proxy.size.width * (CGFloat(sample.content.position.x / self.scale) + 1.0) / 2,
+                        y: proxy.size.height * (CGFloat(sample.content.position.y / self.scale) + 1.0) / 2
+                )
             }
-            GeometryReader { proxy in
-                ForEach (self.data) { sample in
-                    Circle()
-                        .stroke(Color.black, lineWidth: 0.2)
-                        .frame(width: 4, height: 4)
-                        .position(
-                            x: proxy.size.width * (CGFloat(sample.content.position.x / self.scale) + 1.0) / 2,
-                            y: proxy.size.height * (CGFloat(sample.content.position.y / self.scale) + 1.0) / 2
-                    )
-                }
+        }
+    }
+    
+    var StrokedSampleView: some View {
+        GeometryReader { proxy in
+            ForEach (self.data) { sample in
+                Circle()
+                    .stroke(Color.black, lineWidth: 0.2)
+                    .frame(width: 4, height: 4)
+                    .position(
+                        x: proxy.size.width * (CGFloat(sample.content.position.x / self.scale) + 1.0) / 2,
+                        y: proxy.size.height * (CGFloat(sample.content.position.y / self.scale) + 1.0) / 2
+                )
             }
         }
     }
