@@ -42,18 +42,18 @@ public struct PlaygroundView: View {
     var InfoHeader: some View {
         VStack {
             VStack {
-                Text("Epoch: ")
-                    .font(.title)
+                Text("Epoch:")
+                    .font(.subheadline)
                 Text("\(vm.epochCount)")
-                    .font(.title)
+                    .font(.subheadline)
                     .fontWeight(.bold)
             }
             .padding(.bottom, 8)
             VStack {
-                Text("Loss: ")
-                    .font(.title)
+                Text("Loss:")
+                    .font(.subheadline)
                 Text("\(vm.runningLoss)")
-                    .font(.title)
+                    .font(.subheadline)
                     .fontWeight(.light)
             }
         }

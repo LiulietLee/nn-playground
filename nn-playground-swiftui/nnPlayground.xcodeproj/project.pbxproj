@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4F094DA92402C17400809C46 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F094DA82402C17400809C46 /* TestView.swift */; };
-		4F094DAD2402DA7700809C46 /* ConnectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F094DAC2402DA7700809C46 /* ConnectView.swift */; };
-		4F094DAF2402DA8200809C46 /* VisualView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F094DAE2402DA8200809C46 /* VisualView.swift */; };
-		4F66B78A24059D5900A679E2 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F66B78924059D5900A679E2 /* SettingView.swift */; };
 		4F7CEB6524012BFE00DE182A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEB6424012BFE00DE182A /* AppDelegate.swift */; };
 		4F7CEB6724012BFE00DE182A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEB6624012BFE00DE182A /* SceneDelegate.swift */; };
 		4F7CEB6924012BFE00DE182A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEB6824012BFE00DE182A /* ContentView.swift */; };
@@ -22,8 +19,6 @@
 		4F7CEB8324012C7300DE182A /* SequentialModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEB8024012C7300DE182A /* SequentialModel.swift */; };
 		4F7CEB8424012C7300DE182A /* Evolv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEB8124012C7300DE182A /* Evolv.swift */; };
 		4F7CEB8524012C7300DE182A /* FCLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEB8224012C7300DE182A /* FCLayer.swift */; };
-		4F7CEBED24012D1200DE182A /* PlaygroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEBEC24012D1200DE182A /* PlaygroundView.swift */; };
-		4F7CEBF124012D3200DE182A /* PlaygroundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEBF024012D3200DE182A /* PlaygroundViewModel.swift */; };
 		4F7CEC362401710700DE182A /* d2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEBFB2401710700DE182A /* d2.swift */; };
 		4F7CEC372401710700DE182A /* svm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEBFC2401710700DE182A /* svm.swift */; };
 		4F7CEC382401710700DE182A /* Loss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEBFD2401710700DE182A /* Loss.swift */; };
@@ -64,15 +59,17 @@
 		4F7CEC5B2401710700DE182A /* AveragePool+Metal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEC332401710700DE182A /* AveragePool+Metal.swift */; };
 		4F7CEC5C2401710700DE182A /* averagepool_m.metal in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEC342401710700DE182A /* averagepool_m.metal */; };
 		4F7CEC5D2401710700DE182A /* Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEC352401710700DE182A /* Layer.swift */; };
-		4FA51CD6240A61D9002DC02C /* VisualizationPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA51CD5240A61D9002DC02C /* VisualizationPanel.swift */; };
+		4F83752224128BBF0028B4A1 /* ConnectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F83751C24128BBF0028B4A1 /* ConnectView.swift */; };
+		4F83752324128BBF0028B4A1 /* PlaygroundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F83751D24128BBF0028B4A1 /* PlaygroundViewModel.swift */; };
+		4F83752424128BBF0028B4A1 /* PlaygroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F83751E24128BBF0028B4A1 /* PlaygroundView.swift */; };
+		4F83752524128BBF0028B4A1 /* VisualizationPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F83751F24128BBF0028B4A1 /* VisualizationPanel.swift */; };
+		4F83752624128BBF0028B4A1 /* VisualView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F83752024128BBF0028B4A1 /* VisualView.swift */; };
+		4F83752724128BBF0028B4A1 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F83752124128BBF0028B4A1 /* SettingView.swift */; };
 		4FA51CD8240A98C4002DC02C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FA51CD7240A98C4002DC02C /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4F094DA82402C17400809C46 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
-		4F094DAC2402DA7700809C46 /* ConnectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectView.swift; sourceTree = "<group>"; };
-		4F094DAE2402DA8200809C46 /* VisualView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualView.swift; sourceTree = "<group>"; };
-		4F66B78924059D5900A679E2 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		4F7CEB6124012BFE00DE182A /* nnPlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nnPlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F7CEB6424012BFE00DE182A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F7CEB6624012BFE00DE182A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,8 +83,6 @@
 		4F7CEB8024012C7300DE182A /* SequentialModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequentialModel.swift; sourceTree = "<group>"; };
 		4F7CEB8124012C7300DE182A /* Evolv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Evolv.swift; sourceTree = "<group>"; };
 		4F7CEB8224012C7300DE182A /* FCLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FCLayer.swift; sourceTree = "<group>"; };
-		4F7CEBEC24012D1200DE182A /* PlaygroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaygroundView.swift; sourceTree = "<group>"; };
-		4F7CEBF024012D3200DE182A /* PlaygroundViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaygroundViewModel.swift; sourceTree = "<group>"; };
 		4F7CEBFB2401710700DE182A /* d2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = d2.swift; sourceTree = "<group>"; };
 		4F7CEBFC2401710700DE182A /* svm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = svm.swift; sourceTree = "<group>"; };
 		4F7CEBFD2401710700DE182A /* Loss.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loss.swift; sourceTree = "<group>"; };
@@ -129,7 +124,12 @@
 		4F7CEC332401710700DE182A /* AveragePool+Metal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AveragePool+Metal.swift"; sourceTree = "<group>"; };
 		4F7CEC342401710700DE182A /* averagepool_m.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = averagepool_m.metal; sourceTree = "<group>"; };
 		4F7CEC352401710700DE182A /* Layer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layer.swift; sourceTree = "<group>"; };
-		4FA51CD5240A61D9002DC02C /* VisualizationPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualizationPanel.swift; sourceTree = "<group>"; };
+		4F83751C24128BBF0028B4A1 /* ConnectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectView.swift; sourceTree = "<group>"; };
+		4F83751D24128BBF0028B4A1 /* PlaygroundViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaygroundViewModel.swift; sourceTree = "<group>"; };
+		4F83751E24128BBF0028B4A1 /* PlaygroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaygroundView.swift; sourceTree = "<group>"; };
+		4F83751F24128BBF0028B4A1 /* VisualizationPanel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisualizationPanel.swift; sourceTree = "<group>"; };
+		4F83752024128BBF0028B4A1 /* VisualView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisualView.swift; sourceTree = "<group>"; };
+		4F83752124128BBF0028B4A1 /* SettingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		4FA51CD7240A98C4002DC02C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../Desktop/test.playground/Resources/Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -163,7 +163,7 @@
 		4F7CEB6324012BFE00DE182A /* nnPlayground */ = {
 			isa = PBXGroup;
 			children = (
-				4F7CEBF22401316300DE182A /* view */,
+				4F83751A24128BBF0028B4A1 /* view */,
 				4F7CEB7F24012C7300DE182A /* nn-simple */,
 				4F7CEBF82401710700DE182A /* nn */,
 				4F7CEB7824012C6C00DE182A /* utils */,
@@ -205,27 +205,6 @@
 				4F7CEB8224012C7300DE182A /* FCLayer.swift */,
 			);
 			path = "nn-simple";
-			sourceTree = "<group>";
-		};
-		4F7CEBF22401316300DE182A /* view */ = {
-			isa = PBXGroup;
-			children = (
-				4F7CEBF32401316D00DE182A /* PlaygroundView */,
-			);
-			path = view;
-			sourceTree = "<group>";
-		};
-		4F7CEBF32401316D00DE182A /* PlaygroundView */ = {
-			isa = PBXGroup;
-			children = (
-				4F66B78924059D5900A679E2 /* SettingView.swift */,
-				4F094DAE2402DA8200809C46 /* VisualView.swift */,
-				4F094DAC2402DA7700809C46 /* ConnectView.swift */,
-				4FA51CD5240A61D9002DC02C /* VisualizationPanel.swift */,
-				4F7CEBEC24012D1200DE182A /* PlaygroundView.swift */,
-				4F7CEBF024012D3200DE182A /* PlaygroundViewModel.swift */,
-			);
-			path = PlaygroundView;
 			sourceTree = "<group>";
 		};
 		4F7CEBF82401710700DE182A /* nn */ = {
@@ -436,6 +415,27 @@
 			path = AveragePool;
 			sourceTree = "<group>";
 		};
+		4F83751A24128BBF0028B4A1 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				4F83751B24128BBF0028B4A1 /* PlaygroundView */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		4F83751B24128BBF0028B4A1 /* PlaygroundView */ = {
+			isa = PBXGroup;
+			children = (
+				4F83751C24128BBF0028B4A1 /* ConnectView.swift */,
+				4F83751D24128BBF0028B4A1 /* PlaygroundViewModel.swift */,
+				4F83751E24128BBF0028B4A1 /* PlaygroundView.swift */,
+				4F83751F24128BBF0028B4A1 /* VisualizationPanel.swift */,
+				4F83752024128BBF0028B4A1 /* VisualView.swift */,
+				4F83752124128BBF0028B4A1 /* SettingView.swift */,
+			);
+			path = PlaygroundView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -512,7 +512,6 @@
 				4F7CEC522401710700DE182A /* conv_m.metal in Sources */,
 				4F7CEC382401710700DE182A /* Loss.swift in Sources */,
 				4F7CEC3F2401710700DE182A /* Cifar10Reader.swift in Sources */,
-				4FA51CD6240A61D9002DC02C /* VisualizationPanel.swift in Sources */,
 				4F7CEC572401710700DE182A /* MaxPool.swift in Sources */,
 				4F7CEB6524012BFE00DE182A /* AppDelegate.swift in Sources */,
 				4F7CEC362401710700DE182A /* d2.swift in Sources */,
@@ -521,15 +520,16 @@
 				4F7CEC502401710700DE182A /* Conv.swift in Sources */,
 				4F7CEC542401710700DE182A /* ReLU+Metal.swift in Sources */,
 				4F7CEC582401710700DE182A /* MaxPool+Metal.swift in Sources */,
+				4F83752524128BBF0028B4A1 /* VisualizationPanel.swift in Sources */,
 				4F7CEC5A2401710700DE182A /* AveragePool.swift in Sources */,
 				4F7CEC3B2401710700DE182A /* metal_utils.metal in Sources */,
 				4F7CEC3C2401710700DE182A /* Core.swift in Sources */,
 				4F7CEC482401710700DE182A /* Forwardable.swift in Sources */,
+				4F83752424128BBF0028B4A1 /* PlaygroundView.swift in Sources */,
 				4F7CEC4C2401710700DE182A /* dense_m.metal in Sources */,
 				4F7CEC4F2401710700DE182A /* BaseLayer.swift in Sources */,
 				4F7CEC442401710700DE182A /* AutoRunner.swift in Sources */,
 				4F7CEC5B2401710700DE182A /* AveragePool+Metal.swift in Sources */,
-				4F66B78A24059D5900A679E2 /* SettingView.swift in Sources */,
 				4F7CEC422401710700DE182A /* Storagable.swift in Sources */,
 				4F7CEB7E24012C6C00DE182A /* ImageGenerator.swift in Sources */,
 				4F7CEC5D2401710700DE182A /* Layer.swift in Sources */,
@@ -543,25 +543,25 @@
 				4F7CEC412401710700DE182A /* ModelStorage.swift in Sources */,
 				4F7CEC392401710700DE182A /* step_m.metal in Sources */,
 				4F7CEB6724012BFE00DE182A /* SceneDelegate.swift in Sources */,
-				4F094DAF2402DA8200809C46 /* VisualView.swift in Sources */,
-				4F094DAD2402DA7700809C46 /* ConnectView.swift in Sources */,
 				4F7CEC592401710700DE182A /* BasePool.swift in Sources */,
 				4F7CEC432401710700DE182A /* ThreadPool.swift in Sources */,
 				4F7CEC472401710700DE182A /* LLVector.swift in Sources */,
 				4F094DA92402C17400809C46 /* TestView.swift in Sources */,
-				4F7CEBED24012D1200DE182A /* PlaygroundView.swift in Sources */,
 				4F7CEB7D24012C6C00DE182A /* Transform.swift in Sources */,
 				4F7CEC532401710700DE182A /* relu_m.metal in Sources */,
-				4F7CEBF124012D3200DE182A /* PlaygroundViewModel.swift in Sources */,
 				4F7CEB6924012BFE00DE182A /* ContentView.swift in Sources */,
+				4F83752324128BBF0028B4A1 /* PlaygroundViewModel.swift in Sources */,
 				4F7CEB8524012C7300DE182A /* FCLayer.swift in Sources */,
+				4F83752724128BBF0028B4A1 /* SettingView.swift in Sources */,
 				4F7CEC512401710700DE182A /* Conv+Metal.swift in Sources */,
 				4F7CEB8324012C7300DE182A /* SequentialModel.swift in Sources */,
 				4F7CEC4D2401710700DE182A /* Dense.swift in Sources */,
+				4F83752224128BBF0028B4A1 /* ConnectView.swift in Sources */,
 				4F7CEB7C24012C6C00DE182A /* DataGenerator.swift in Sources */,
 				4F7CEC3E2401710700DE182A /* MNISTReader.swift in Sources */,
 				4F7CEC372401710700DE182A /* svm.swift in Sources */,
 				4F7CEC462401710700DE182A /* NormalRandom.swift in Sources */,
+				4F83752624128BBF0028B4A1 /* VisualView.swift in Sources */,
 				4F7CEC4B2401710700DE182A /* Container.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
