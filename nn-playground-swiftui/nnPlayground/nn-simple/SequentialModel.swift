@@ -60,64 +60,6 @@ public class SequentialModel {
 }
 
 extension SequentialModel {
-    
-    public class svm {
-        public static var d = 1 - 0.618
-       
-        static func batchLoss(score: [Double], label: [Double]) -> Double {
-            let maxi = label.indexOfMax()
-           
-            var loss = 0.0
-            for i in 0..<score.count {
-                if i != maxi {
-                    loss += max(0, score[i] - score[maxi] + d)
-                }
-            }
-           
-            return loss
-        }
-       
-        public static func loss(score: [[Double]], label: [[Double]]) -> Double {
-            var loss = 0.0
-            for i in 0..<score.count {
-                loss += batchLoss(score: score[i], label: label[i])
-            }
-            return loss / Double(score.count)
-        }
-       
-        static func batchDelta(score: [Double], label: [Double]) -> [Double] {
-            var da = [Double](repeating: 0.0, count: score.count)
-           
-            let maxi = label.indexOfMax()
-           
-            for i in 0..<label.count {
-                if i != maxi {
-                    da[i] = score[i] - score[maxi] + d > 0 ? 1 : 0
-                } else {
-                    for j in 0..<label.count {
-                        if j != maxi {
-                            da[i] += score[j] - score[maxi] + d > 0 ? -1 : 0
-                        }
-                    }
-                }
-            }
-           
-            return da
-       }
-       
-       public static func delta(score: [[Double]], label: [[Double]]) -> [[Double]] {
-            var res = [[Double]]()
-            for i in 0..<score.count {
-                res.append(
-                    batchDelta(score: score[i], label: label[i])
-                )
-            }
-            return res
-        }
-    }
-}
-
-extension SequentialModel {
     public class d2 {
         public static func loss(score: [[Double]], label: [[Double]]) -> Double {
             var loss = 0.0

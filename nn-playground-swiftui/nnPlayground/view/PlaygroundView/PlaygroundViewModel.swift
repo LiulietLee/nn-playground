@@ -54,7 +54,7 @@ public class PlaygroundViewModel: ObservableObject {
         set {
             evolvStop()
             DataGenerator.noise = newValue
-            model.data = DataGenerator.getTrainingData(.center)
+            model.data = DataGenerator.getTrainingData()
             model.model = SequentialModel(model.desc)
             newModelGenerated()
         }

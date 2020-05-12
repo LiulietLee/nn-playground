@@ -51,9 +51,9 @@ public func makePixelSet(_ array: [[Double]]) -> [[Pixel]] {
             let elem = atan(array[array.count - 1 - i][j]) * 2 / .pi
             
             if elem > 0.0 {
-                pixels[i][j] = Pixel(red: 1.0, green: (1 - elem), blue: (1 - elem))
+                pixels[height - i - 1][j] = Pixel(red: 1.0, green: (1 - elem), blue: (1 - elem))
             } else {
-                pixels[i][j] = Pixel(red: (1 + elem), green: (1 + elem), blue: 1.0)
+                pixels[height - i - 1][j] = Pixel(red: (1 + elem), green: (1 + elem), blue: 1.0)
             }
         }
     }

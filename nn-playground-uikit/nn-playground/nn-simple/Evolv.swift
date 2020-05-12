@@ -26,7 +26,7 @@ public class Evolv {
     
     public init() {
         model = SequentialModel(desc)
-        data = DataGenerator.getTrainingData(.diag)
+        data = DataGenerator.getTrainingData()
     }
 
     public func addLayer() {

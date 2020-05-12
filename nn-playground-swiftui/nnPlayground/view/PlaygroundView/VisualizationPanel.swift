@@ -36,6 +36,13 @@ extension PlaygroundView {
                 .frame(width: 180, height: 180)
                 .cornerRadius(12)
                 .shadow(radius: 2)
+                .onTapGesture {
+                    self.vm.evolvStop()
+                    DataGenerator.nextType()
+                    self.vm.model.data = DataGenerator.getTrainingData()
+                    self.vm.model.model = SequentialModel(self.vm.model.desc)
+                    self.vm.newModelGenerated()
+            }
         }
     }
     

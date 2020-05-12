@@ -13,6 +13,7 @@ public class FCLayer {
     var outFeatures = 0
     var batchSize = 1
     var relu = true
+    var leakyVal = 1e-4
     
     public var score = [[Double]]()
     var interScore = [[Double]]()
@@ -37,7 +38,7 @@ public class FCLayer {
         paramIniter.normalRandn(n: outFeatures + inFeatures)
         param = (0..<outFeatures).map { i in
             (0..<inFeatures).map { j in
-                Double(paramIniter[i * inFeatures + j])
+                Double(paramIniter[i * inFeatures + j]) + 0.2
             }
         }
         
@@ -60,7 +61,7 @@ public class FCLayer {
             
             for i in 0..<outFeatures {
                 if relu {
-                    score[batch][i] = max(interScore[batch][i], 0.001 * interScore[batch][i])
+                    score[batch][i] = max(interScore[batch][i], leakyVal * interScore[batch][i])
                 } else {
                     score[batch][i] = interScore[batch][i]
                 }
@@ -87,7 +88,7 @@ public class FCLayer {
         for batch in 0..<batchSize {
             for i in 0..<outFeatures {
                 if relu {
-                    dbias[batch][i] += delta[batch][i] * (interScore[batch][i] >= 0.0 ? 1.0 : 0.001)
+                    dbias[batch][i] += delta[batch][i] * (interScore[batch][i] >= 0.0 ? 1.0 : leakyVal)
                 } else {
                     dbias[batch][i] += delta[batch][i]
                 }
@@ -96,7 +97,7 @@ public class FCLayer {
             for i in 0..<outFeatures {
                 for j in 0..<inFeatures {
                     if relu {
-                        da[batch][j] += delta[batch][i] * param[i][j] * (interScore[batch][i] >= 0.0 ? 1.0 : 0.001)
+                        da[batch][j] += delta[batch][i] * param[i][j] * (interScore[batch][i] >= 0.0 ? 1.0 : leakyVal)
                     } else {
                         da[batch][j] += delta[batch][i] * param[i][j]
                     }
@@ -106,7 +107,7 @@ public class FCLayer {
             for i in 0..<outFeatures {
                 for j in 0..<inFeatures {
                     if relu {
-                        dparam[batch][i][j] += delta[batch][i] * input[batch][j] * (interScore[batch][i] >= 0.0 ? 1.0 : 0.001)
+                        dparam[batch][i][j] += delta[batch][i] * input[batch][j] * (interScore[batch][i] >= 0.0 ? 1.0 : leakyVal)
                     } else {
                         dparam[batch][i][j] += delta[batch][i] * input[batch][j]
                     }

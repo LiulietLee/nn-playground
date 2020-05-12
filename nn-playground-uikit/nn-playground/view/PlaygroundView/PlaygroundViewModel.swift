@@ -52,7 +52,7 @@ public class PlaygroundViewModel {
         set {
             evolvStop()
             DataGenerator.noise = newValue
-            model.data = DataGenerator.getTrainingData(.center)
+            model.data = DataGenerator.getTrainingData()
             model.model = SequentialModel(model.desc)
             newModelGenerated()
             notice.post(name: Notification.Name("SampleUpdated"), object: nil)
