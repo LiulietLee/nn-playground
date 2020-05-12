@@ -26,7 +26,7 @@ public class Evolv {
     
     public init() {
         model = SequentialModel(desc)
-        data = DataGenerator.getTrainingData(.center)
+        data = DataGenerator.getTrainingData(.diag)
     }
 
     public func addLayer() {
@@ -119,7 +119,6 @@ public class Evolv {
                     let i = Int.random(in: 0..<data.count)
                     return [self.data[i].label]
                 }
-                print()
             } else {
                 X = (i * batchSize..<(i + 1) * batchSize).map { id in
                     Transform.transform((self.data[id].position.x, self.data[id].position.y))[0]
@@ -127,7 +126,6 @@ public class Evolv {
                 label = (i * batchSize..<(i + 1) * batchSize).map { id in
                     [self.data[id].label]
                 }
-                print()
             }
 
             let _ = model.forward(X)

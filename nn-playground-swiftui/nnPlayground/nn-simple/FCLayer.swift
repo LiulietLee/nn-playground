@@ -33,12 +33,14 @@ public class FCLayer {
         self.inFeatures = inFeatures
         self.outFeatures = outFeatures
         
-        let paramIniter = NNArray(outFeatures, inFeatures).normalRandn(n: outFeatures + inFeatures)
+        var paramIniter = [Double](repeating: 0.0, count: inFeatures * outFeatures)
+        paramIniter.normalRandn(n: outFeatures + inFeatures)
         param = (0..<outFeatures).map { i in
             (0..<inFeatures).map { j in
-                Double(paramIniter[i, j])
+                Double(paramIniter[i * inFeatures + j])
             }
         }
+        
         bias = [Double](repeating: 0.0, count: outFeatures)
     }
     

@@ -49,9 +49,8 @@ public class SequentialModel {
     }
     
     public func step(lr: Double, momentum: Double) {
-        let pool = ThreadPool(count: layers.count)
-        pool.run { i in
-            self.layers[i].step(lr: lr, momentum: momentum)
+        for layer in layers {
+            layer.step(lr: lr, momentum: momentum)
         }
     }
     
@@ -151,5 +150,25 @@ extension Array where Element == Double {
             }
         }
         return id
+    }
+    
+    @discardableResult
+    public mutating func normalRandn(sigma: Double = 1.0, mu: Double = 0.0, n: Int = 2) -> [Double] {
+        let len = count - count % 2
+        let scale = sqrt(2.0 / Double(n))
+        
+        for i in stride(from: 0, to: len, by: 2) {
+            var x = 0.0, y = 0.0, rsq = 0.0, f = 0.0
+            repeat {
+                x = 2.0 * Double.random(in: 0.0..<1.0) - 1.0
+                y = 2.0 * Double.random(in: 0.0..<1.0) - 1.0
+                rsq = x * x + y * y
+            } while rsq >= 1.0 || rsq == 0.0
+            f = sqrt(-2.0 * log(rsq) / rsq)
+            self[i] = (sigma * (x * f) + mu) * scale
+            self[i + 1] = (sigma * (y * f) + mu) * scale
+        }
+
+        return self
     }
 }

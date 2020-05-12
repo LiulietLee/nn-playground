@@ -19,53 +19,13 @@
 		4F7CEB8324012C7300DE182A /* SequentialModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEB8024012C7300DE182A /* SequentialModel.swift */; };
 		4F7CEB8424012C7300DE182A /* Evolv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEB8124012C7300DE182A /* Evolv.swift */; };
 		4F7CEB8524012C7300DE182A /* FCLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEB8224012C7300DE182A /* FCLayer.swift */; };
-		4F7CEC362401710700DE182A /* d2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEBFB2401710700DE182A /* d2.swift */; };
-		4F7CEC372401710700DE182A /* svm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEBFC2401710700DE182A /* svm.swift */; };
-		4F7CEC382401710700DE182A /* Loss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEBFD2401710700DE182A /* Loss.swift */; };
-		4F7CEC392401710700DE182A /* step_m.metal in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEBFF2401710700DE182A /* step_m.metal */; };
-		4F7CEC3A2401710700DE182A /* Step+Metal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEC002401710700DE182A /* Step+Metal.swift */; };
-		4F7CEC3B2401710700DE182A /* metal_utils.metal in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEC042401710700DE182A /* metal_utils.metal */; };
-		4F7CEC3C2401710700DE182A /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEC052401710700DE182A /* Core.swift */; };
-		4F7CEC3D2401710700DE182A /* DatasetReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEC082401710700DE182A /* DatasetReader.swift */; };
-		4F7CEC3E2401710700DE182A /* MNISTReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEC092401710700DE182A /* MNISTReader.swift */; };
-		4F7CEC3F2401710700DE182A /* Cifar10Reader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEC0A2401710700DE182A /* Cifar10Reader.swift */; };
-		4F7CEC402401710700DE182A /* ImageReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEC0C2401710700DE182A /* ImageReader.swift */; };
-		4F7CEC412401710700DE182A /* ModelStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEC0E2401710700DE182A /* ModelStorage.swift */; };
-		4F7CEC422401710700DE182A /* Storagable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEC0F2401710700DE182A /* Storagable.swift */; };
-		4F7CEC432401710700DE182A /* ThreadPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEC112401710700DE182A /* ThreadPool.swift */; };
-		4F7CEC442401710700DE182A /* AutoRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEC122401710700DE182A /* AutoRunner.swift */; };
-		4F7CEC452401710700DE182A /* NNArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEC142401710700DE182A /* NNArray.swift */; };
-		4F7CEC462401710700DE182A /* NormalRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEC152401710700DE182A /* NormalRandom.swift */; };
-		4F7CEC472401710700DE182A /* LLVector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEC162401710700DE182A /* LLVector.swift */; };
-		4F7CEC482401710700DE182A /* Forwardable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEC182401710700DE182A /* Forwardable.swift */; };
-		4F7CEC492401710700DE182A /* BaseContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEC1A2401710700DE182A /* BaseContainer.swift */; };
-		4F7CEC4A2401710700DE182A /* Sequential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEC1B2401710700DE182A /* Sequential.swift */; };
-		4F7CEC4B2401710700DE182A /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEC1C2401710700DE182A /* Container.swift */; };
-		4F7CEC4C2401710700DE182A /* dense_m.metal in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEC1F2401710700DE182A /* dense_m.metal */; };
-		4F7CEC4D2401710700DE182A /* Dense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEC202401710700DE182A /* Dense.swift */; };
-		4F7CEC4E2401710700DE182A /* Dense+Metal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEC212401710700DE182A /* Dense+Metal.swift */; };
-		4F7CEC4F2401710700DE182A /* BaseLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEC222401710700DE182A /* BaseLayer.swift */; };
-		4F7CEC502401710700DE182A /* Conv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEC242401710700DE182A /* Conv.swift */; };
-		4F7CEC512401710700DE182A /* Conv+Metal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEC252401710700DE182A /* Conv+Metal.swift */; };
-		4F7CEC522401710700DE182A /* conv_m.metal in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEC262401710700DE182A /* conv_m.metal */; };
-		4F7CEC532401710700DE182A /* relu_m.metal in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEC282401710700DE182A /* relu_m.metal */; };
-		4F7CEC542401710700DE182A /* ReLU+Metal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEC292401710700DE182A /* ReLU+Metal.swift */; };
-		4F7CEC552401710700DE182A /* ReLU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEC2A2401710700DE182A /* ReLU.swift */; };
-		4F7CEC562401710700DE182A /* maxpool_m.metal in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEC2D2401710700DE182A /* maxpool_m.metal */; };
-		4F7CEC572401710700DE182A /* MaxPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEC2E2401710700DE182A /* MaxPool.swift */; };
-		4F7CEC582401710700DE182A /* MaxPool+Metal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEC2F2401710700DE182A /* MaxPool+Metal.swift */; };
-		4F7CEC592401710700DE182A /* BasePool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEC302401710700DE182A /* BasePool.swift */; };
-		4F7CEC5A2401710700DE182A /* AveragePool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEC322401710700DE182A /* AveragePool.swift */; };
-		4F7CEC5B2401710700DE182A /* AveragePool+Metal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEC332401710700DE182A /* AveragePool+Metal.swift */; };
-		4F7CEC5C2401710700DE182A /* averagepool_m.metal in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEC342401710700DE182A /* averagepool_m.metal */; };
-		4F7CEC5D2401710700DE182A /* Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7CEC352401710700DE182A /* Layer.swift */; };
 		4F83752224128BBF0028B4A1 /* ConnectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F83751C24128BBF0028B4A1 /* ConnectView.swift */; };
 		4F83752324128BBF0028B4A1 /* PlaygroundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F83751D24128BBF0028B4A1 /* PlaygroundViewModel.swift */; };
 		4F83752424128BBF0028B4A1 /* PlaygroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F83751E24128BBF0028B4A1 /* PlaygroundView.swift */; };
 		4F83752524128BBF0028B4A1 /* VisualizationPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F83751F24128BBF0028B4A1 /* VisualizationPanel.swift */; };
 		4F83752624128BBF0028B4A1 /* VisualView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F83752024128BBF0028B4A1 /* VisualView.swift */; };
 		4F83752724128BBF0028B4A1 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F83752124128BBF0028B4A1 /* SettingView.swift */; };
-		4FA51CD8240A98C4002DC02C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FA51CD7240A98C4002DC02C /* Assets.xcassets */; };
+		4FF2F3A6246AD30800F6C9B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FF2F3A5246AD30800F6C9B7 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,54 +43,13 @@
 		4F7CEB8024012C7300DE182A /* SequentialModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequentialModel.swift; sourceTree = "<group>"; };
 		4F7CEB8124012C7300DE182A /* Evolv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Evolv.swift; sourceTree = "<group>"; };
 		4F7CEB8224012C7300DE182A /* FCLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FCLayer.swift; sourceTree = "<group>"; };
-		4F7CEBFB2401710700DE182A /* d2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = d2.swift; sourceTree = "<group>"; };
-		4F7CEBFC2401710700DE182A /* svm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = svm.swift; sourceTree = "<group>"; };
-		4F7CEBFD2401710700DE182A /* Loss.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loss.swift; sourceTree = "<group>"; };
-		4F7CEBFF2401710700DE182A /* step_m.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = step_m.metal; sourceTree = "<group>"; };
-		4F7CEC002401710700DE182A /* Step+Metal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Step+Metal.swift"; sourceTree = "<group>"; };
-		4F7CEC032401710700DE182A /* metal_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = metal_utils.h; sourceTree = "<group>"; };
-		4F7CEC042401710700DE182A /* metal_utils.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = metal_utils.metal; sourceTree = "<group>"; };
-		4F7CEC052401710700DE182A /* Core.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Core.swift; sourceTree = "<group>"; };
-		4F7CEC082401710700DE182A /* DatasetReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatasetReader.swift; sourceTree = "<group>"; };
-		4F7CEC092401710700DE182A /* MNISTReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNISTReader.swift; sourceTree = "<group>"; };
-		4F7CEC0A2401710700DE182A /* Cifar10Reader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cifar10Reader.swift; sourceTree = "<group>"; };
-		4F7CEC0C2401710700DE182A /* ImageReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageReader.swift; sourceTree = "<group>"; };
-		4F7CEC0E2401710700DE182A /* ModelStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelStorage.swift; sourceTree = "<group>"; };
-		4F7CEC0F2401710700DE182A /* Storagable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storagable.swift; sourceTree = "<group>"; };
-		4F7CEC112401710700DE182A /* ThreadPool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadPool.swift; sourceTree = "<group>"; };
-		4F7CEC122401710700DE182A /* AutoRunner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoRunner.swift; sourceTree = "<group>"; };
-		4F7CEC142401710700DE182A /* NNArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NNArray.swift; sourceTree = "<group>"; };
-		4F7CEC152401710700DE182A /* NormalRandom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NormalRandom.swift; sourceTree = "<group>"; };
-		4F7CEC162401710700DE182A /* LLVector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLVector.swift; sourceTree = "<group>"; };
-		4F7CEC182401710700DE182A /* Forwardable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Forwardable.swift; sourceTree = "<group>"; };
-		4F7CEC1A2401710700DE182A /* BaseContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseContainer.swift; sourceTree = "<group>"; };
-		4F7CEC1B2401710700DE182A /* Sequential.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sequential.swift; sourceTree = "<group>"; };
-		4F7CEC1C2401710700DE182A /* Container.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
-		4F7CEC1F2401710700DE182A /* dense_m.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = dense_m.metal; sourceTree = "<group>"; };
-		4F7CEC202401710700DE182A /* Dense.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dense.swift; sourceTree = "<group>"; };
-		4F7CEC212401710700DE182A /* Dense+Metal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dense+Metal.swift"; sourceTree = "<group>"; };
-		4F7CEC222401710700DE182A /* BaseLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseLayer.swift; sourceTree = "<group>"; };
-		4F7CEC242401710700DE182A /* Conv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conv.swift; sourceTree = "<group>"; };
-		4F7CEC252401710700DE182A /* Conv+Metal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Conv+Metal.swift"; sourceTree = "<group>"; };
-		4F7CEC262401710700DE182A /* conv_m.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = conv_m.metal; sourceTree = "<group>"; };
-		4F7CEC282401710700DE182A /* relu_m.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = relu_m.metal; sourceTree = "<group>"; };
-		4F7CEC292401710700DE182A /* ReLU+Metal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ReLU+Metal.swift"; sourceTree = "<group>"; };
-		4F7CEC2A2401710700DE182A /* ReLU.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReLU.swift; sourceTree = "<group>"; };
-		4F7CEC2D2401710700DE182A /* maxpool_m.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = maxpool_m.metal; sourceTree = "<group>"; };
-		4F7CEC2E2401710700DE182A /* MaxPool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaxPool.swift; sourceTree = "<group>"; };
-		4F7CEC2F2401710700DE182A /* MaxPool+Metal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MaxPool+Metal.swift"; sourceTree = "<group>"; };
-		4F7CEC302401710700DE182A /* BasePool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePool.swift; sourceTree = "<group>"; };
-		4F7CEC322401710700DE182A /* AveragePool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AveragePool.swift; sourceTree = "<group>"; };
-		4F7CEC332401710700DE182A /* AveragePool+Metal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AveragePool+Metal.swift"; sourceTree = "<group>"; };
-		4F7CEC342401710700DE182A /* averagepool_m.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = averagepool_m.metal; sourceTree = "<group>"; };
-		4F7CEC352401710700DE182A /* Layer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layer.swift; sourceTree = "<group>"; };
 		4F83751C24128BBF0028B4A1 /* ConnectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectView.swift; sourceTree = "<group>"; };
 		4F83751D24128BBF0028B4A1 /* PlaygroundViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaygroundViewModel.swift; sourceTree = "<group>"; };
 		4F83751E24128BBF0028B4A1 /* PlaygroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaygroundView.swift; sourceTree = "<group>"; };
 		4F83751F24128BBF0028B4A1 /* VisualizationPanel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisualizationPanel.swift; sourceTree = "<group>"; };
 		4F83752024128BBF0028B4A1 /* VisualView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisualView.swift; sourceTree = "<group>"; };
 		4F83752124128BBF0028B4A1 /* SettingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
-		4FA51CD7240A98C4002DC02C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../Desktop/test.playground/Resources/Assets.xcassets; sourceTree = "<group>"; };
+		4FF2F3A5246AD30800F6C9B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,7 +84,6 @@
 			children = (
 				4F83751A24128BBF0028B4A1 /* view */,
 				4F7CEB7F24012C7300DE182A /* nn-simple */,
-				4F7CEBF82401710700DE182A /* nn */,
 				4F7CEB7824012C6C00DE182A /* utils */,
 				4F7CEB6424012BFE00DE182A /* AppDelegate.swift */,
 				4F7CEB6624012BFE00DE182A /* SceneDelegate.swift */,
@@ -173,7 +91,7 @@
 				4F7CEB6F24012C0200DE182A /* LaunchScreen.storyboard */,
 				4F7CEB7224012C0200DE182A /* Info.plist */,
 				4F094DA82402C17400809C46 /* TestView.swift */,
-				4FA51CD7240A98C4002DC02C /* Assets.xcassets */,
+				4FF2F3A5246AD30800F6C9B7 /* Assets.xcassets */,
 				4F7CEB6C24012C0200DE182A /* Preview Content */,
 			);
 			path = nnPlayground;
@@ -205,214 +123,6 @@
 				4F7CEB8224012C7300DE182A /* FCLayer.swift */,
 			);
 			path = "nn-simple";
-			sourceTree = "<group>";
-		};
-		4F7CEBF82401710700DE182A /* nn */ = {
-			isa = PBXGroup;
-			children = (
-				4F7CEBF92401710700DE182A /* loss */,
-				4F7CEC012401710700DE182A /* utils */,
-				4F7CEC172401710700DE182A /* forwardable */,
-			);
-			path = nn;
-			sourceTree = "<group>";
-		};
-		4F7CEBF92401710700DE182A /* loss */ = {
-			isa = PBXGroup;
-			children = (
-				4F7CEBFA2401710700DE182A /* Loss */,
-				4F7CEBFE2401710700DE182A /* Step */,
-			);
-			path = loss;
-			sourceTree = "<group>";
-		};
-		4F7CEBFA2401710700DE182A /* Loss */ = {
-			isa = PBXGroup;
-			children = (
-				4F7CEBFB2401710700DE182A /* d2.swift */,
-				4F7CEBFC2401710700DE182A /* svm.swift */,
-				4F7CEBFD2401710700DE182A /* Loss.swift */,
-			);
-			path = Loss;
-			sourceTree = "<group>";
-		};
-		4F7CEBFE2401710700DE182A /* Step */ = {
-			isa = PBXGroup;
-			children = (
-				4F7CEBFF2401710700DE182A /* step_m.metal */,
-				4F7CEC002401710700DE182A /* Step+Metal.swift */,
-			);
-			path = Step;
-			sourceTree = "<group>";
-		};
-		4F7CEC012401710700DE182A /* utils */ = {
-			isa = PBXGroup;
-			children = (
-				4F7CEC022401710700DE182A /* Metal */,
-				4F7CEC062401710700DE182A /* IO */,
-				4F7CEC132401710700DE182A /* Data Struct */,
-			);
-			path = utils;
-			sourceTree = "<group>";
-		};
-		4F7CEC022401710700DE182A /* Metal */ = {
-			isa = PBXGroup;
-			children = (
-				4F7CEC032401710700DE182A /* metal_utils.h */,
-				4F7CEC042401710700DE182A /* metal_utils.metal */,
-				4F7CEC052401710700DE182A /* Core.swift */,
-			);
-			path = Metal;
-			sourceTree = "<group>";
-		};
-		4F7CEC062401710700DE182A /* IO */ = {
-			isa = PBXGroup;
-			children = (
-				4F7CEC072401710700DE182A /* Dataset */,
-				4F7CEC0B2401710700DE182A /* Image */,
-				4F7CEC0D2401710700DE182A /* Model */,
-				4F7CEC102401710700DE182A /* Sync */,
-			);
-			path = IO;
-			sourceTree = "<group>";
-		};
-		4F7CEC072401710700DE182A /* Dataset */ = {
-			isa = PBXGroup;
-			children = (
-				4F7CEC082401710700DE182A /* DatasetReader.swift */,
-				4F7CEC092401710700DE182A /* MNISTReader.swift */,
-				4F7CEC0A2401710700DE182A /* Cifar10Reader.swift */,
-			);
-			path = Dataset;
-			sourceTree = "<group>";
-		};
-		4F7CEC0B2401710700DE182A /* Image */ = {
-			isa = PBXGroup;
-			children = (
-				4F7CEC0C2401710700DE182A /* ImageReader.swift */,
-			);
-			path = Image;
-			sourceTree = "<group>";
-		};
-		4F7CEC0D2401710700DE182A /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				4F7CEC0E2401710700DE182A /* ModelStorage.swift */,
-				4F7CEC0F2401710700DE182A /* Storagable.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		4F7CEC102401710700DE182A /* Sync */ = {
-			isa = PBXGroup;
-			children = (
-				4F7CEC112401710700DE182A /* ThreadPool.swift */,
-				4F7CEC122401710700DE182A /* AutoRunner.swift */,
-			);
-			path = Sync;
-			sourceTree = "<group>";
-		};
-		4F7CEC132401710700DE182A /* Data Struct */ = {
-			isa = PBXGroup;
-			children = (
-				4F7CEC142401710700DE182A /* NNArray.swift */,
-				4F7CEC152401710700DE182A /* NormalRandom.swift */,
-				4F7CEC162401710700DE182A /* LLVector.swift */,
-			);
-			path = "Data Struct";
-			sourceTree = "<group>";
-		};
-		4F7CEC172401710700DE182A /* forwardable */ = {
-			isa = PBXGroup;
-			children = (
-				4F7CEC182401710700DE182A /* Forwardable.swift */,
-				4F7CEC192401710700DE182A /* Container */,
-				4F7CEC1D2401710700DE182A /* Layer */,
-			);
-			path = forwardable;
-			sourceTree = "<group>";
-		};
-		4F7CEC192401710700DE182A /* Container */ = {
-			isa = PBXGroup;
-			children = (
-				4F7CEC1A2401710700DE182A /* BaseContainer.swift */,
-				4F7CEC1B2401710700DE182A /* Sequential.swift */,
-				4F7CEC1C2401710700DE182A /* Container.swift */,
-			);
-			path = Container;
-			sourceTree = "<group>";
-		};
-		4F7CEC1D2401710700DE182A /* Layer */ = {
-			isa = PBXGroup;
-			children = (
-				4F7CEC1E2401710700DE182A /* Dense */,
-				4F7CEC222401710700DE182A /* BaseLayer.swift */,
-				4F7CEC232401710700DE182A /* Conv */,
-				4F7CEC272401710700DE182A /* ReLU */,
-				4F7CEC2B2401710700DE182A /* Pool */,
-				4F7CEC352401710700DE182A /* Layer.swift */,
-			);
-			path = Layer;
-			sourceTree = "<group>";
-		};
-		4F7CEC1E2401710700DE182A /* Dense */ = {
-			isa = PBXGroup;
-			children = (
-				4F7CEC1F2401710700DE182A /* dense_m.metal */,
-				4F7CEC202401710700DE182A /* Dense.swift */,
-				4F7CEC212401710700DE182A /* Dense+Metal.swift */,
-			);
-			path = Dense;
-			sourceTree = "<group>";
-		};
-		4F7CEC232401710700DE182A /* Conv */ = {
-			isa = PBXGroup;
-			children = (
-				4F7CEC242401710700DE182A /* Conv.swift */,
-				4F7CEC252401710700DE182A /* Conv+Metal.swift */,
-				4F7CEC262401710700DE182A /* conv_m.metal */,
-			);
-			path = Conv;
-			sourceTree = "<group>";
-		};
-		4F7CEC272401710700DE182A /* ReLU */ = {
-			isa = PBXGroup;
-			children = (
-				4F7CEC282401710700DE182A /* relu_m.metal */,
-				4F7CEC292401710700DE182A /* ReLU+Metal.swift */,
-				4F7CEC2A2401710700DE182A /* ReLU.swift */,
-			);
-			path = ReLU;
-			sourceTree = "<group>";
-		};
-		4F7CEC2B2401710700DE182A /* Pool */ = {
-			isa = PBXGroup;
-			children = (
-				4F7CEC2C2401710700DE182A /* MaxPool */,
-				4F7CEC302401710700DE182A /* BasePool.swift */,
-				4F7CEC312401710700DE182A /* AveragePool */,
-			);
-			path = Pool;
-			sourceTree = "<group>";
-		};
-		4F7CEC2C2401710700DE182A /* MaxPool */ = {
-			isa = PBXGroup;
-			children = (
-				4F7CEC2D2401710700DE182A /* maxpool_m.metal */,
-				4F7CEC2E2401710700DE182A /* MaxPool.swift */,
-				4F7CEC2F2401710700DE182A /* MaxPool+Metal.swift */,
-			);
-			path = MaxPool;
-			sourceTree = "<group>";
-		};
-		4F7CEC312401710700DE182A /* AveragePool */ = {
-			isa = PBXGroup;
-			children = (
-				4F7CEC322401710700DE182A /* AveragePool.swift */,
-				4F7CEC332401710700DE182A /* AveragePool+Metal.swift */,
-				4F7CEC342401710700DE182A /* averagepool_m.metal */,
-			);
-			path = AveragePool;
 			sourceTree = "<group>";
 		};
 		4F83751A24128BBF0028B4A1 /* view */ = {
@@ -495,7 +205,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F7CEB7124012C0200DE182A /* LaunchScreen.storyboard in Resources */,
-				4FA51CD8240A98C4002DC02C /* Assets.xcassets in Resources */,
+				4FF2F3A6246AD30800F6C9B7 /* Assets.xcassets in Resources */,
 				4F7CEB6E24012C0200DE182A /* Preview Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -507,62 +217,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F7CEC5C2401710700DE182A /* averagepool_m.metal in Sources */,
-				4F7CEC402401710700DE182A /* ImageReader.swift in Sources */,
-				4F7CEC522401710700DE182A /* conv_m.metal in Sources */,
-				4F7CEC382401710700DE182A /* Loss.swift in Sources */,
-				4F7CEC3F2401710700DE182A /* Cifar10Reader.swift in Sources */,
-				4F7CEC572401710700DE182A /* MaxPool.swift in Sources */,
 				4F7CEB6524012BFE00DE182A /* AppDelegate.swift in Sources */,
-				4F7CEC362401710700DE182A /* d2.swift in Sources */,
-				4F7CEC3D2401710700DE182A /* DatasetReader.swift in Sources */,
-				4F7CEC562401710700DE182A /* maxpool_m.metal in Sources */,
-				4F7CEC502401710700DE182A /* Conv.swift in Sources */,
-				4F7CEC542401710700DE182A /* ReLU+Metal.swift in Sources */,
-				4F7CEC582401710700DE182A /* MaxPool+Metal.swift in Sources */,
 				4F83752524128BBF0028B4A1 /* VisualizationPanel.swift in Sources */,
-				4F7CEC5A2401710700DE182A /* AveragePool.swift in Sources */,
-				4F7CEC3B2401710700DE182A /* metal_utils.metal in Sources */,
-				4F7CEC3C2401710700DE182A /* Core.swift in Sources */,
-				4F7CEC482401710700DE182A /* Forwardable.swift in Sources */,
 				4F83752424128BBF0028B4A1 /* PlaygroundView.swift in Sources */,
-				4F7CEC4C2401710700DE182A /* dense_m.metal in Sources */,
-				4F7CEC4F2401710700DE182A /* BaseLayer.swift in Sources */,
-				4F7CEC442401710700DE182A /* AutoRunner.swift in Sources */,
-				4F7CEC5B2401710700DE182A /* AveragePool+Metal.swift in Sources */,
-				4F7CEC422401710700DE182A /* Storagable.swift in Sources */,
 				4F7CEB7E24012C6C00DE182A /* ImageGenerator.swift in Sources */,
-				4F7CEC5D2401710700DE182A /* Layer.swift in Sources */,
-				4F7CEC492401710700DE182A /* BaseContainer.swift in Sources */,
-				4F7CEC452401710700DE182A /* NNArray.swift in Sources */,
-				4F7CEC4A2401710700DE182A /* Sequential.swift in Sources */,
-				4F7CEC3A2401710700DE182A /* Step+Metal.swift in Sources */,
-				4F7CEC552401710700DE182A /* ReLU.swift in Sources */,
 				4F7CEB8424012C7300DE182A /* Evolv.swift in Sources */,
-				4F7CEC4E2401710700DE182A /* Dense+Metal.swift in Sources */,
-				4F7CEC412401710700DE182A /* ModelStorage.swift in Sources */,
-				4F7CEC392401710700DE182A /* step_m.metal in Sources */,
 				4F7CEB6724012BFE00DE182A /* SceneDelegate.swift in Sources */,
-				4F7CEC592401710700DE182A /* BasePool.swift in Sources */,
-				4F7CEC432401710700DE182A /* ThreadPool.swift in Sources */,
-				4F7CEC472401710700DE182A /* LLVector.swift in Sources */,
 				4F094DA92402C17400809C46 /* TestView.swift in Sources */,
 				4F7CEB7D24012C6C00DE182A /* Transform.swift in Sources */,
-				4F7CEC532401710700DE182A /* relu_m.metal in Sources */,
 				4F7CEB6924012BFE00DE182A /* ContentView.swift in Sources */,
 				4F83752324128BBF0028B4A1 /* PlaygroundViewModel.swift in Sources */,
 				4F7CEB8524012C7300DE182A /* FCLayer.swift in Sources */,
 				4F83752724128BBF0028B4A1 /* SettingView.swift in Sources */,
-				4F7CEC512401710700DE182A /* Conv+Metal.swift in Sources */,
 				4F7CEB8324012C7300DE182A /* SequentialModel.swift in Sources */,
-				4F7CEC4D2401710700DE182A /* Dense.swift in Sources */,
 				4F83752224128BBF0028B4A1 /* ConnectView.swift in Sources */,
 				4F7CEB7C24012C6C00DE182A /* DataGenerator.swift in Sources */,
-				4F7CEC3E2401710700DE182A /* MNISTReader.swift in Sources */,
-				4F7CEC372401710700DE182A /* svm.swift in Sources */,
-				4F7CEC462401710700DE182A /* NormalRandom.swift in Sources */,
 				4F83752624128BBF0028B4A1 /* VisualView.swift in Sources */,
-				4F7CEC4B2401710700DE182A /* Container.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
