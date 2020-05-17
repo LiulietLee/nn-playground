@@ -81,7 +81,7 @@ public class PlaygroundViewModel: ObservableObject {
     }
     
     public func evolvOnce() {
-        if epochCount > 200 {
+        if epochCount > 5000 {
             return
         }
         
@@ -111,7 +111,7 @@ public class PlaygroundViewModel: ObservableObject {
     
     public func evolv() {
         DispatchQueue.global().async {
-            while self.epochCount <= 200 {
+            while self.epochCount <= 5000 {
                 self.barrier.wait()
                 self.evolvOnce()
                 self.barrier.signal()
@@ -124,7 +124,7 @@ public class PlaygroundViewModel: ObservableObject {
     }
     
     public func evolvBegin() {
-        if epochCount > 200 {
+        if epochCount > 5000 {
             return
         }
         

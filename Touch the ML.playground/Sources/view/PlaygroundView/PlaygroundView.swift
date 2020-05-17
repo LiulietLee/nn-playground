@@ -59,7 +59,7 @@ public struct PlaygroundView: View {
                     self.SettingCover
                 }
             }
-        }//.scaleEffect(0.8 + pow((1 - scale), 4))
+        }.scaleEffect(0.8 + pow((1 - scale), 4))
     }
     
     var InfoHeader: some View {
@@ -172,13 +172,15 @@ public struct PlaygroundView: View {
     
     var ControlPanel: some View {
         VStack(alignment: .center) {
-            Image(systemName: "slider.horizontal.3")
-                .scaleEffect(2)
-                .foregroundColor(.blue)
-                .padding(.bottom, 64)
-                .padding(.trailing, 36)
-                .onTapGesture {
-                    self.showSetting.toggle()
+            if canUseSetting {
+                Image(systemName: "slider.horizontal.3")
+                    .scaleEffect(2)
+                    .foregroundColor(.blue)
+                    .padding(.bottom, 64)
+                    .padding(.trailing, 36)
+                    .onTapGesture {
+                        self.showSetting.toggle()
+                }
             }
             
             self.InfoHeader

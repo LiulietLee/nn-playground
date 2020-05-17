@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' display-mode='rendered'>
+    <pages>
+        <page name='Digit Classifier'/>
+        <page name='Linear Classification'/>
+        <page name='Multilayer Network'/>
+        <page name='Data Preprocessing'/>
+        <page name='Fun Time'/>
+    </pages>
+</playground>
